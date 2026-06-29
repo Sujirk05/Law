@@ -4,7 +4,7 @@ import Footer from "./components/home/Footer";
 import Hero from "./components/home/Hero"; 
 import Appointpage from "./pages/Appointpage"
 import Servicepage from "./pages/Servicepage";
-import Contact from "./components/home/Contact";
+import Contactpage from "./pages/Contactpage";
 import Home from "./components/home/Home";
 import Aboutpage from "./pages/Aboutpage";
 
@@ -31,7 +31,7 @@ function App() {
       < Route path="/" element={<Home />} />
         <Route path="/Aboutpage" element={<Aboutpage />} />
         <Route path="/Servicepage" element={<Servicepage />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Contactpage" element={<Contactpage />} />
         <Route path="/Appointpage" element={<Appointpage/>}/>
       </Routes> 
 
