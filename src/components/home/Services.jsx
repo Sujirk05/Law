@@ -86,7 +86,7 @@
                 {service.description}
               </p>
               <button className="mt-5 bg-yellow-500 text-black px-4 py-3 rounded-lg font-semibold hover:scale-105 transition">
-      Book Appointment
+      <a href="/Appointpage">  Book Appointment</a>
     </button>
             </div>
           ))}

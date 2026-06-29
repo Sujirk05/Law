@@ -15,7 +15,7 @@ function Servicepage(){
 </h1>        
                 <p className="text-lg text-gray-700 font-semibold ">At Incredible Law Chamber, we are committed to delivering exceptional legal services with integrity, professionalism, and a client-centered approach. We understand that legal matters can be complex and emotionally challenging, which is why we focus on providing clear guidance, practical solutions, and strong representation at every stage. Whether you require legal consultation, dispute resolution, documentation, or courtroom advocacy, our experienced team works diligently to protect your rights and help you make informed decisions with confidence.</p>
      <button className="mt-5 bg-yellow-500 text-black px-4 py-3 rounded-lg font-semibold hover:scale-105 transition">
-      Book Appointment </button>
+      <a href="/Appointpage">  Book Appointment </a></button>
       </div>
 
       <div className= " flex justify-center">
