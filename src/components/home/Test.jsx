@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 
 function Test() {
@@ -41,8 +42,14 @@ const test=[
 ];
 
 
-
-
+const[current,setCurrent]= useState(0)
+const item = test[current];
+function nextSlide() {
+    setCurrent((current+1) % test.length)
+}
+function prevSlide() {
+   setCurrent((current - 1 + test.length) % test.length)
+}
    return(
     <section id="Test" className="bg-slate-100">
         <div className="text-center">
@@ -50,22 +57,17 @@ const test=[
     <h1 className="text-slate-600 mt-4  text-xl">Our commitment to justice is reflected in the experiences of those we represent.</h1>
 </div>
 <div className="flex gap-6 overflow-hidden mt-8 p-8">
+<div  className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto ">
+ <h3 className="text-xl font-semibold text-slate-900">{item.name}</h3>
+  <p className="text-gray-500">{item.service}</p>
+   <p className="flex mb-4 text-yellow-500 text-xl">{"★".repeat (item.star)}</p>
+       <p className="text-gray-600 text-lg leading-relaxed mb-6">{item.description}</p>
+</div>
+</div>
+    <div className="flex justify-center gap-4 mt-6 pb-8">
+   <button onClick={prevSlide} className="font-semibold text-slate-600">Prev</button>
+   <button onClick={nextSlide} className="font-semibold text-slate-600">Next</button>
 
-
-    {test.map((test,index) => (
-        <div 
-        key={index}
-       className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto " >
-               <h3 className="text-xl font-semibold text-slate-900">{test.name}</h3> 
-                 <p className="text-gray-500">{test.service}</p>
-                  <p className="flex mb-4 text-yellow-500 text-xl">{"★".repeat (test.star)}</p>           
-     <p className="text-gray-600 text-lg leading-relaxed mb-6">{test.description}</p>
-
-
-        </div>
-     ) )
-
-    }
 </div>
 
     </section>

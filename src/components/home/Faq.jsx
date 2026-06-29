@@ -30,11 +30,14 @@ function Faq() {
 <p className="font-semibold text-slate-600 mt-4">Find answers to common legal questions and learn how we can assist you with confidence and clarity.</p>
    </div>
 
-<div className="max-w-4xl mx-auto mt-10 space-y-4 p-6">
+<div className="max-w-4xl mx-auto mt-10 space-y-4 p-6 ">
   {faq.map((faq, index) => (
     <div key={index}   className="bg-white rounded-xl shadow-md p-5">
-   <p className="text-xl  text-slate-900">{faq.question}</p>
-   <p className=" text-slate-900">{faq.answer}</p>
+  <div className="cursor-pointer" onClick={()=> setOpenIndex(openIndex === index ? null : index) }> <p className="text-xl  text-slate-900">{faq.question}</p></div>
+   {openIndex === index && ( 
+    <p className=" text-slate-900">{faq.answer}</p> 
+   
+   )} 
     </div>
   ))}
 </div>
