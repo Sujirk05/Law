@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { motion, AnimatePresence } from "framer-motion";
 
 function Test() {
 const test=[
@@ -44,6 +44,7 @@ const test=[
 
 const[current,setCurrent]= useState(0)
 const item = test[current];
+
 function nextSlide() {
     setCurrent((current+1) % test.length)
 }
@@ -56,14 +57,35 @@ function prevSlide() {
     <h1 className="text-slate-900 text-4xl font-bold p-4">What Our Clients Say</h1>
     <h1 className="text-slate-600 mt-4  text-xl">Our commitment to justice is reflected in the experiences of those we represent.</h1>
 </div>
-<div className="flex gap-6 overflow-hidden mt-8 p-8">
-<div  className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto ">
- <h3 className="text-xl font-semibold text-slate-900">{item.name}</h3>
-  <p className="text-gray-500">{item.service}</p>
-   <p className="flex mb-4 text-yellow-500 text-xl">{"★".repeat (item.star)}</p>
-       <p className="text-gray-600 text-lg leading-relaxed mb-6">{item.description}</p>
+<div className=" h-96 w-full flex justify-center items-center mt-8 overflow-hidden">
+
+  <AnimatePresence mode="wait">
+    <motion.div
+      key={current}
+      initial={{ x:100, opacity: 0, scale: 0.8 }}
+      animate={{ x: 0, opacity: 1, scale: 1 }}
+      exit={{ x: -200, opacity: 0, scale: 0.8 }}
+      transition={{ duration: 0.6 }}
+      className=" bg-white rounded-2xl shadow-xl p-8 w-full max-w-2xl z-30"
+    >
+      <h3 className="text-xl font-semibold text-slate-900">
+        {item.name}
+      </h3>
+
+      <p className="text-gray-500">{item.service}</p>
+
+      <p className="flex mb-4 text-yellow-500 text-xl">
+        {"★".repeat(item.star)}
+      </p>
+
+      <p className="text-gray-600 text-lg leading-relaxed mb-6">
+        {item.description}
+      </p>
+    </motion.div>
+  </AnimatePresence>
+
 </div>
-</div>
+ 
     <div className="flex justify-center gap-4 mt-6 pb-8">
    <button onClick={prevSlide} className="font-semibold text-slate-600">Prev</button>
    <button onClick={nextSlide} className="font-semibold text-slate-600">Next</button>

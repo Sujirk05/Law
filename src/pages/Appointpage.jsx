@@ -1,12 +1,13 @@
 function Appointpage(){
     return(
         <section className="bg-gray-100 py-16">
-            <div className="text-center">
-         <h1 className="text-4xl text-slate-600 font-bold">Book Appointment</h1>
-         <p  className="text-slate-600 mt-4  text-xl">Schedule a consultation with our legal experts.</p>
-         </div>
+           
             <form className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-2xl mt-4">
-                <div >
+                <div className="text-center">
+         <h1 className="text-4xl text-slate-600 font-bold">Book Appointment</h1>
+         <p  className="text-slate-400 mt-4 font-semibold text-xl">Schedule a consultation with our legal experts.</p>
+         </div>
+                <div className="mt-4" >
           <div className="flex items-center gap-4">
              <label className="mb-2 font-medium w-32 mt-6">Name</label>
               <input type="text" placeholder="Full Name" className=" flex-1 p-2  border border-gray-300 rounded-lg outline-none"></input>
