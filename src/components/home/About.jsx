@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 function About() {
   return (
-    <section id="About"className="w-full min-h-screen py-28 px-12 bg-gray-300 scroll-mt-24 overflow-hidden" >
-      <div className="max-w-7xl mx-auto flex items-center  gap-40">
+    <section id="About"className="w-full  py-28 px-12 bg-gray-300 scroll-mt-24 overflow-hidden" >
+      <div className="max-w-7xl mx-auto flex items-center  gap-20">
 
      
         {/* <div className="w-1/2 flex justify-center"> */}
@@ -10,8 +10,8 @@ function About() {
         {/* </div> */}
 
        <motion.div
-  className="w-1/2"
-  initial={{ opacity: 0, x: -100}}
+  className="w-3/5 shrink-0"
+  initial={{ opacity: 0, x:-100}}
   whileInView={{ opacity: 1, x: 0 }}
   transition={{ duration: 2 }}
   viewport={{ once: false, amount: 0.3 }}
@@ -34,30 +34,32 @@ function About() {
             families, and businesses while protecting rights and ensuring
             strong representation.
           </p>
+          <a href="/Aboutpage" className="text-slate-600 text-xl font-bold"><p className="mt-10 underline ">Read More</p></a>
+          
           </div>
 </motion.div>
          
          <motion.div
-  className="w-1/2"
+  className="w-2/5 shrink-0"
   initial={{ opacity: 0, x: 100 }}
   whileInView={{ opacity: 1, x: 0 }}
   transition={{ duration: 2 }}
   viewport={{ once: false, amount: 0.3 }}
-><div className="relative w-130 h-107">
-           <div className=" absolute top-0 left-1/2 -translate-x-1/2 w-52 h-52 rounded-full bg-yellow-50 border-2 border-yellow-500 shadow-xl flex flex-col items-center justify-center">
+><div className="relative w-md h-112">
+           <div className=" absolute top-0 left-20 -translate-x-1/2 w-44 h-44 rounded-full bg-yellow-50 border-2 border-yellow-500 shadow-xl flex flex-col items-center justify-center">
   <h3 className="text-4xl font-bold text-yellow-500">15+</h3>
-  <p className="text-center text-sm px-3">
+  <p className="text-center text-xl font-serif  px-3">
   Years of Experience
 </p>
 </div>
 
-                   <div className=" absolute bottom-0 left-0 w-52 h-52 rounded-full bg-yellow-50 border-2 border-yellow-500 shadow-xl flex flex-col items-center justify-center">
+                   <div className=" absolute bottom-0 left-4 w-44 h-44 rounded-full bg-yellow-50 border-2 border-yellow-500 shadow-xl flex flex-col items-center justify-center">
   <h3 className="text-4xl font-bold text-yellow-500">500+</h3>
-  <p className="text-center text-sm px-3">cases handled</p>
+  <p className="text-center font-serif text-xl px-3">cases handled</p>
 </div>
-          <div className=" absolute bottom-0 right-0 w-52 h-52 rounded-full bg-yellow-50 border-2 border-yellow-500 shadow-xl flex flex-col items-center justify-center">
+          <div className=" absolute top-20 right-4 w-44 h-44 rounded-full bg-yellow-50 border-2 border-yellow-500 shadow-xl flex flex-col items-center justify-center">
   <h3 className="text-4xl font-bold text-yellow-500">98%</h3>
-  <p className="text-center text-sm px-3">Success Rate</p>
+  <p className="text-center text-xl font-serif px-3">Success Rate</p>
 </div>
 
           </div>
