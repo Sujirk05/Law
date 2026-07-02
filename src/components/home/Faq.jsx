@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion} from "framer-motion";
 function Faq() {
     const faq=[
         {
@@ -24,9 +25,9 @@ function Faq() {
     ]
     const [openIndex, setOpenIndex] = useState(null);
     return(
-<section className="bg-gray-50">
-   <div className="text-center mt-8">
-<h1 className="text-4xl font-black text-slate-600">Frequently Asked Questions</h1>
+<section className="bg-gray-50 p-8 ">
+   <div className="text-center ">
+<h1 className="text-4xl font-black text-slate-600 ">Frequently Asked Questions</h1>
 <p className="font-semibold text-slate-600 mt-4">Find answers to common legal questions and learn how we can assist you with confidence and clarity.</p>
    </div>
 
@@ -34,10 +35,19 @@ function Faq() {
   {faq.map((faq, index) => (
     <div key={index}   className="bg-white rounded-xl shadow-md p-5">
   <div className="cursor-pointer" onClick={()=> setOpenIndex(openIndex === index ? null : index) }> <p className="text-xl  text-slate-900">{faq.question}</p></div>
+
    {openIndex === index && ( 
-    <p className=" text-slate-900">{faq.answer}</p> 
-   
+     <motion.div
+      initial={{ height: 0, opacity: 0 }}
+      animate={{ height: "auto", opacity: 1 }}
+      exit={{ height: 0, opacity: 0 }}
+      transition={{ duration: 0.4 }}
+      className="overflow-hidden"
+    >
+   <p className=" text-slate-900">{faq.answer}</p> 
+   </motion.div>
    )} 
+
     </div>
   ))}
 </div>

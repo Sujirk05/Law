@@ -1,11 +1,34 @@
-import Services from "../components/home/Services"
+ import Services from "../components/home/Services"
+import { motion } from "framer-motion";
 function Servicepage(){
+    
     return(
         <section>
-            < div className="bg-gray-400 text-white py-10 ">  
-              <h1 className="text-4xl font-bold mb-4 text-center text-yellow-500" style={{fontFamily:"cinzel"}}>Our Service</h1> 
-              </div> 
-              
+            {/* service hero section */}
+          <div className="relative h-[400px] text-white">
+
+  <img  src="/images/hero3.jpg" alt="Legal Services" className="w-full h-full object-cover" />
+
+
+  <div className="absolute inset-0 bg-black/75"></div>
+<motion.div
+  className="absolute inset-0 flex flex-col items-center justify-center -translate-y-4"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+    <h1 className="text-6xl font-bold text-white"  style={{ fontFamily: "cinzel" }} >
+      Our Services
+    </h1>
+
+    <p className="mt-4 text-lg tracking-wide max-w-3xl text-center text-gray-200">
+      Expert legal solutions tailored to your needs
+    </p>
+  </motion.div>
+
+</div>
+
+{/* service content section */}
              <div className="bg-gray-100 ">
                   <div className="grid md:grid-cols-2 items-center gap-10 p-16">
                     <div>
@@ -23,8 +46,10 @@ function Servicepage(){
              </div>
 </div>
              </div>
-            <Services/>
-
+             {/* service card section */}
+             <Services/>  
+                   
+    
 </section>
     )
 } 

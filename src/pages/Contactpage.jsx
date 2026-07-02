@@ -1,13 +1,25 @@
 import { FaWhatsapp } from "react-icons/fa";
+import { motion } from "framer-motion";
 function Contactpage() {
     return(
         <section>
-             < div className="bg-gray-400 text-white py-10 ">  
-              <h1 className="text-4xl font-bold mb-4 text-center text-yellow-500" style={{fontFamily:"cinzel"}}>Contact Us</h1>
-              <p className="text-2xl font-semibold text-center text-slate-600">Get trusted legal guidance tailored to your needs. Reach out today to schedule a consultation.</p> 
+            {/* Contact Page Hero Section */}
+                <div className="relative h-[400px] text-white">
+              <img src="/images/hero4.jpg" alt="Contact Us" className="w-full h-full object-cover" />
+               <div className="absolute inset-0 bg-black/75"></div>
+<motion.div
+  className="absolute inset-0 flex flex-col items-center justify-center -translate-y-4"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+            
+    <h1 className="text-6xl font-bold text-white"  style={{ fontFamily: "cinzel" }} >Contact Us</h1>
+                <p className="mt-4 text-lg tracking-wide max-w-3xl text-center text-gray-200">Get trusted legal guidance tailored to your needs. Reach out today to schedule a consultation.</p> 
+             </motion.div>
               </div> 
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+{/* contact card section */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 p-4">
                 <div className="bg-gray-100 rounded-xl shadow-md p-6 text-center hover:-translate-y-2 transition duration-300">
                     <img src="/images/phone.svg" className="w-10 h-10 mx-auto" />
                     <p className="text-xl font-bold text-gray-700">Call Us</p>
@@ -29,7 +41,9 @@ function Contactpage() {
                     <h2 >Mon - Sat : 9:00 AM - 7:00 PM</h2>
                 </div>
               </div>
-        <div className="flex gap-8">
+
+              {/* contact form section */}
+        <div className="flex gap-8 p-4">
               <div className="bg-white flex-1 p-8 rounded-2xl shadow-2xl mt-16 mb-16 animate-slideRight">
          <div className="text-center">
                 <h1 className="font-bold text-slate-600 text-4xl">Discuss Your Legal Matter</h1>

@@ -4,19 +4,13 @@ function Hero() {
         <section id="Hero">
         <div className="relative w-full h-screen">
 
-  <img
-    src="/images/bg.jpg"
-    alt=""
-    className="absolute inset-0 w-full h-full object-cover"
-  />
+  <img  src="/images/bg.jpg"   alt=""   className="absolute inset-0 w-full h-full object-cover" />
 
 
   <div className="absolute inset-0 bg-black/60"></div>
 
- 
   <div className="relative z-10 h-full flex items-center justify-between px-20">
 
-   
     <div className="max-w-2xl text-white">
       <p className="text-lg font-semibold text-yellow-400 tracking-widest">
         TRUSTED LEGAL EXPERTISE
