@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 function Navbar(){
     return (
     <>
@@ -9,18 +9,24 @@ function Navbar(){
  <Link to="/"><img src="/images/logo1.svg" alt="Incredible Law Chamber" className="h-28 w-auto" /></Link>
 </div>
 
-      {/* <h1 style={{ fontFamily: "Cinzel" , fontWeight:"bold" }} className='text-3xl '><a href ="/">Incredible Law Chamber</a></h1> */}
     </div>
     <div className="flex items-center gap-8">
   <nav
     className="flex gap-8 text-xl font-medium"
     style={{ fontFamily: "Poppins" }}
   >
-    <Link to="/">Home</Link>
-    <Link to="/Aboutpage">About</Link>
-    <Link to="/Servicepage">Services</Link>
-    <Link to="/Contactpage">Contact</Link>
-  
+    <NavLink to="/" end className={({isActive}) => isActive ? 'text-yellow-500': 'text-white '}>
+      Home
+    </NavLink>
+    <NavLink to="/Aboutpage" className={({isActive}) => ` ${isActive ? 'text-yellow-500' : 'text-white'}`}>
+      About
+    </NavLink>
+    <NavLink to="/Servicepage" className={({isActive}) => ` ${isActive ? 'text-yellow-500' : 'text-white'}`}>
+      Services
+    </NavLink>
+    <NavLink to="/Contactpage" className={({isActive}) => ` ${isActive ? 'text-yellow-500' : 'text-white'}`}>
+      Contact
+    </NavLink>
   </nav>
 
   <button className="bg-yellow-500 text-black px-4 py-3 rounded-lg font-semibold" style={{ fontFamily: "Poppins" }} >
