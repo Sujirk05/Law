@@ -23,7 +23,7 @@ function Footer() {
             <li><a href="/" className="hover:text-yellow-400">Home</a></li>
             <li><a href="/Aboutpage" className="hover:text-yellow-400">About</a></li>
             <li><a href="/Servicepage" className="hover:text-yellow-400">Services</a></li>
-            <li><a href="/Contact" className="hover:text-yellow-400">Contact</a></li>
+            <li><a href="/Contactpage" className="hover:text-yellow-400">Contact</a></li>
           </ul>
         </div>
 

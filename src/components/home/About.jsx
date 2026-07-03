@@ -1,73 +1,116 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 function About() {
   return (
-    <section id="About"className="w-full  py-28 px-12 bg-gray-300 scroll-mt-24 overflow-hidden" >
-      <div className="max-w-7xl mx-auto flex items-center  gap-20">
+    <section  id="About"  className="   relative w-full py-28 px-6 lg:px-16 overflow-hidden scroll-mt-24   bg-gradient-to-r from-black via-[#0B1628] to-[#111111]    border-y border-yellow-500/10  "   >
+      
+      <div className="absolute top-24 right-24 w-96 h-96 bg-yellow-500/10 blur-[140px] rounded-full" />
+      <div className="absolute bottom-10 left-10 w-72 h-72 bg-yellow-500/5 blur-[120px] rounded-full" />
 
-     
-        {/* <div className="w-1/2 flex justify-center"> */}
-          {/* <img src="/images/lawyer2.png" alt="Lawyer" className="h-125 object-contain" /> */}
-        {/* </div> */}
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center relative z-10">
+       
+        <motion.div
+          initial={{ opacity: 0, x: -120 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="relative"
+        >
+          <div
+            className="
+              relative rounded-3xl overflow-hidden
+              border border-yellow-500/20
+              ring-1 ring-yellow-500/10
+              shadow-[0_0_40px_rgba(234,179,8,0.12)]
+            "
+          >
+            <img   src="/images/bg2.jpg"   alt="Law Office"  className="  w-full h-[500px] object-cover  brightness-105 contrast-110    hover:scale-[1.02]   transition duration-700   " />
 
-       <motion.div
-  className="w-3/5 shrink-0"
-  initial={{ opacity: 0, x:-100}}
-  whileInView={{ opacity: 1, x: 0 }}
-  transition={{ duration: 2 }}
-  viewport={{ once: false, amount: 0.3 }}
->
-        <div className="">
-          <p className="text-yellow-600 font-semibold tracking-widest text-2xl">   ABOUT US</p>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+          </div> 
+          <div
+            className="
+              absolute -top-5 right-[-15px]
+              bg-black/40 backdrop-blur-md
+              border border-yellow-500/30
+              rounded-2xl px-7 py-4
+              shadow-[0_0_20px_rgba(234,179,8,0.12)]   "   >
+            <h3 className="text-4xl font-bold text-yellow-400">15+</h3>
+            <p className="text-gray-300 text-sm">Years Experience</p>
+          </div>
 
-          <h2 className="text-4xl font-bold mt-4 text-slate-900">
-            Dedicated to Justice, Committed to Excellence
+         
+          <div
+            className="
+              absolute bottom-10 -left-14
+              bg-black/40 backdrop-blur-md
+              border border-yellow-500/30
+              rounded-2xl px-9 py-6
+              shadow-[0_0_30px_rgba(234,179,8,0.15)]  "   >
+            <h3 className="text-5xl font-bold text-yellow-400">500+</h3>
+            <p className="text-gray-300">Cases Handled</p>
+          </div>
+
+          <div
+            className="
+              absolute bottom-6 -right-4
+              bg-black/40 backdrop-blur-md
+              border border-yellow-500/30
+              rounded-2xl px-7 py-4
+              shadow-[0_0_20px_rgba(234,179,8,0.12)]  "  >
+            <h3 className="text-4xl font-bold text-yellow-400">98%</h3>
+            <p className="text-gray-300 text-sm">Success Rate</p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 120 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="max-w-2xl"
+        >
+          <p className="uppercase tracking-[0.35em] text-yellow-400 font-semibold">
+            About Us
+          </p>
+
+          <h2 className="text-4xl lg:text-5xl font-bold mt-6 text-white leading-tight">
+            Dedicated to Justice,
+            <br />
+            Committed to Excellence
           </h2>
 
-          <p className="mt-6 text-gray-700 font-semibold text-lg leading-relaxed">
-            At Incredible Law Chamber, we are committed to delivering exceptional
-            legal services with integrity, professionalism, and unwavering
-            dedication to justice.
+
+          <p className="mt-8 text-gray-300 text-lg leading-relaxed">
+            At Incredible Law Chamber, we are committed to delivering
+            exceptional legal services with integrity, professionalism,
+            and unwavering dedication to justice.
           </p>
 
-          <p className="mt-4 text-gray-700 text-lg font-semibold leading-relaxed">
+          <p className="mt-6 text-gray-400 text-lg leading-relaxed">
             We provide strategic legal solutions tailored to individuals,
             families, and businesses while protecting rights and ensuring
-            strong representation.
+            strong representation in every case.
           </p>
-          <a href="/Aboutpage" className="text-slate-600 text-xl font-bold"><p className="mt-10 underline ">Read More</p></a>
-          
-          </div>
-</motion.div>
-         
-         <motion.div
-  className="w-2/5 shrink-0"
-  initial={{ opacity: 0, x: 100 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  transition={{ duration: 2 }}
-  viewport={{ once: false, amount: 0.3 }}
-><div className="relative w-md h-112">
-           <div className=" absolute top-0 left-20 -translate-x-1/2 w-44 h-44 rounded-full bg-yellow-50 border-2 border-yellow-500 shadow-xl flex flex-col items-center justify-center">
-  <h3 className="text-4xl font-bold text-yellow-500">15+</h3>
-  <p className="text-center text-xl font-serif  px-3">
-  Years of Experience
-</p>
-</div>
 
-                   <div className=" absolute bottom-0 left-4 w-44 h-44 rounded-full bg-yellow-50 border-2 border-yellow-500 shadow-xl flex flex-col items-center justify-center">
-  <h3 className="text-4xl font-bold text-yellow-500">500+</h3>
-  <p className="text-center font-serif text-xl px-3">cases handled</p>
-</div>
-          <div className=" absolute top-20 right-4 w-44 h-44 rounded-full bg-yellow-50 border-2 border-yellow-500 shadow-xl flex flex-col items-center justify-center">
-  <h3 className="text-4xl font-bold text-yellow-500">98%</h3>
-  <p className="text-center text-xl font-serif px-3">Success Rate</p>
-</div>
-
+          <div className="mt-12 flex gap-5">
+            <Link to="/Aboutpage">
+              <button
+                className=" px-10 py-5 bg-yellow-500 text-black font-semibold    rounded-2xl hover:scale-105   transition duration-300 shadow-xl   "  >
+                Learn More
+              </button>
+            </Link>
+           <Link to="/Contactpage">
+            <button className="  px-10 py-5 border border-yellow-500  text-yellow-400 rounded-2xl   hover:bg-yellow-500 hover:text-black   transition duration-300 "  >
+              Contact Us
+            </button>
+            </Link>
           </div>
-          </motion.div>
-        </div>
-      
+        </motion.div>
+      </div>
     </section>
   );
 }
 
-export default About
+export default About;

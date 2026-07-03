@@ -51,50 +51,99 @@ function Card() {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 mb-12">
-      {cards.map((card, index) => (
-        <div
-          key={index}
-          className="
-            max-w-[340px] w-full mx-auto
-            bg-white rounded-xl shadow-md p-5
-            border-t-4 border-transparent
-            hover:border-yellow-500
-            hover:-translate-y-2 hover:shadow-2xl
-            transition-all duration-300
-            group
-          "
-        >
-          {/* Image */}
-          <div className="overflow-hidden rounded-lg">
+    <section className="py-16 px-6 ">
+      {/* Section Heading */}
+      <div className="text-center mb-14">
+        <p className="text-yellow-500 font-semibold uppercase tracking-[3px] mb-3">
+          Our Expertise
+        </p>
+
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+          Legal Services We Offer
+        </h2>
+
+      
+
+        <p className="max-w-3xl mx-auto mt-6 text-gray-600 leading-relaxed">
+          We provide comprehensive legal assistance across multiple practice
+          areas, delivering trusted advice, strong representation, and
+          practical legal solutions tailored to every client.
+        </p>
+      </div>
+
+      {/* Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className="
+              group relative
+              w-[280px] h-[360px]
+              mx-auto
+              rounded-2xl
+              overflow-hidden
+              shadow-xl
+              flex items-end
+              p-6
+              transition-all duration-500
+              hover:-translate-y-4
+            "
+          >
+            {/* Background Image */}
             <img
               src={card.image}
               alt={card.title}
-              className="
-                w-full h-44 object-cover
-                transition-transform duration-500
-                group-hover:scale-110
-              "
+              className="absolute inset-0 w-full h-full object-cover"
             />
+
+            {/* Dark Overlay */}
+            <div
+              className="
+                absolute inset-0
+                bg-black/70
+                opacity-0
+                group-hover:opacity-100
+                transition duration-500
+              "
+            ></div>
+
+            {/* Content */}
+            <div
+              className="
+                relative z-10 text-white
+                opacity-0
+                translate-y-8
+                group-hover:opacity-100
+                group-hover:translate-y-0
+                transition-all duration-500
+              "
+            >
+              <h3 className="text-2xl font-bold">{card.title}</h3>
+
+              <p className="text-sm mt-3 leading-relaxed">
+                {card.description}
+              </p>
+
+              <a href="/Appointpage">
+                <button
+                  className="
+                    mt-5 px-4 py-2
+                    bg-yellow-500
+                    text-black
+                    rounded-md
+                    font-semibold
+                    hover:bg-yellow-600
+                    transition
+                  "
+                >
+                  Book Appointment
+                </button>
+              </a>
+            </div>
           </div>
-
-          {/* Title */}
-          <h3 className="text-xl font-bold text-slate-900 mt-4 min-h-[64px]">
-            {card.title}
-          </h3>
-
-          {/* Description */}
-          <p className="text-gray-600 mt-4 min-h-[120px] leading-relaxed">
-            {card.description}
-          </p>
-
-          {/* Button */}
-          <button className="mt-5 bg-yellow-500 text-black px-4 py-3 rounded-lg font-semibold hover:bg-yellow-600 hover:scale-105 transition">
-            <a href="/Appointpage">Book Appointment</a>
-          </button>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </section>
   );
 }
 

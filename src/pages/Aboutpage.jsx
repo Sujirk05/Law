@@ -20,6 +20,7 @@ function Aboutpage() {
       <p className="mt-4 text-lg tracking-wide max-w-3xl text-center text-gray-200">
         Advocating Justice. Protecting Rights. Delivering Results.
       </p>
+      
       </motion.div>
   </div>
 </div>
@@ -195,68 +196,95 @@ transition={{ duration: 0.6, delay: 0.6 }}
 </div>
 
 {/* why choose us section */}
-     <div className="grid md:grid-cols-2grid md:grid-cols-2 gap-20 mb-12 mt-12">
-<div className="mt-8 mb-4 ml-10">
-    <h1 className="text-black font-bold text-4xl ">Why Choose Us?</h1>
+<div className="bg-slate-100 py-16 px-6">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
 
-    <div className="grid mt-6 gap-4 ">
+   
+    <div>
+      <p className="uppercase tracking-[4px] text-yellow-500 font-semibold mb-3">
+        WHY CHOOSE US
+      </p>
 
-    <div className="text-gray-600 w-[400px] bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500 ">
-    <p className="">Expert Legal Guidance</p>
+      <h1 className="text-slate-900 font-bold text-5xl leading-tight">
+        Trusted Legal Excellence
+      </h1>
+
+      <div className="grid mt-8 gap-5">
+
+        <div className="w-full bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500 hover:translate-x-2 hover:shadow-xl transition duration-300">
+          <p className="text-gray-700 font-medium text-lg">
+            Expert Legal Guidance
+          </p>
+        </div>
+
+        <div className="w-full bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500 hover:translate-x-2 hover:shadow-xl transition duration-300">
+          <p className="text-gray-700 font-medium text-lg">
+            Experienced Representation
+          </p>
+        </div>
+
+        <div className="w-full bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500 hover:translate-x-2 hover:shadow-xl transition duration-300">
+          <p className="text-gray-700 font-medium text-lg">
+            Client-Centered Approach
+          </p>
+        </div>
+
+        <div className="w-full bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500 hover:translate-x-2 hover:shadow-xl transition duration-300">
+          <p className="text-gray-700 font-medium text-lg">
+            Dedicated Support
+          </p>
+        </div>
+
+        <div className="w-full bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500 hover:translate-x-2 hover:shadow-xl transition duration-300">
+          <p className="text-gray-700 font-medium text-lg">
+            Integrity & Confidentiality
+          </p>
+        </div>
+
+      </div>
     </div>
 
-    <div className="text-gray-600 w-[400px] bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500">
-     
-    <p>Experienced Representation</p>
+   
+    <div className="grid gap-6">
+
+      <div className="bg-slate-900 rounded-2xl shadow-xl p-8 border-t-4 border-yellow-500 hover:-translate-x-2 transition duration-300">
+        <h3 className="text-3xl font-bold mb-4 text-white">
+          Our Vision
+        </h3>
+
+        <p className="text-gray-300 leading-relaxed text-lg">
+          To be a trusted and respected legal institution recognized for
+          excellence, integrity, and unwavering commitment to justice,
+          delivering reliable legal solutions to every client.
+        </p>
+      </div>
+
+      <div className="bg-slate-900 rounded-2xl shadow-xl p-8 border-t-4 border-yellow-500 hover:-translate-x-2 transition duration-300">
+        <h3 className="text-3xl font-bold mb-4 text-white">
+          Our Mission
+        </h3>
+
+        <p className="text-gray-300 leading-relaxed text-lg">
+          Our mission is to provide reliable, client-focused, and
+          result-oriented legal services through expert guidance,
+          strategic representation, and ethical legal practice.
+        </p>
+      </div>
+
+      <div className="bg-slate-900 rounded-2xl shadow-xl p-8 border-t-4 border-yellow-500 hover:-translate-x-2 transition duration-300">
+        <h3 className="text-3xl font-bold mb-4 text-white">
+          Our Commitment
+        </h3>
+
+        <p className="text-gray-300 leading-relaxed text-lg">
+          At Incredible Law Chamber, we are committed to delivering legal
+          services with integrity, confidentiality, and unwavering dedication.
+        </p>
+      </div>
+
     </div>
-
-<div className="text-gray-600 w-[400px] bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500 ">
-    <p>Client-Centered Approach</p>
-    </div>
-
-    <div className="text-gray-600 w-[400px] bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500">
-        <p>Dedicated Support</p>
-    </div>
-
-    <div className="text-gray-600 w-[400px] bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500"> 
-        <p>Integrity & Confidentiality</p>
-    </div>
-
-    </div>
-
+  </div>
 </div>
-
-{/* our Commitment Section */}
-<div className="grid grid-rows-3 md:grid-row-3 gap-4 mt-4 max-w-4xl ">
-
-<div className="bg-white rounded-2xl shadow-md p-6 border-t-4 border-yellow-500 hover:-translate-x-2 transition duration-300">
-  <h3 className="text-2xl font-bold mb-3 text-gray-800">
-    Our Vision
-  </h3>
-
-  <p className="text-gray-600 leading-relaxed ">
-    To be a trusted and respected legal institution recognized for
-    excellence, integrity, and unwavering commitment to justice,
-    delivering reliable legal solutions to every client.
-  </p>
-</div>
-
-<div className="bg-white  rounded-2xl shadow-md p-6 border-t-4 border-yellow-500 hover:-translate-x-2 transition duration-300" >
-    <h3 className="text-2xl font-bold mb-3 text-gray-800">Our Mission</h3>
-    <p className='text-gray-600 leading-relaxed'>Our mission is to provide reliable, client-focused, and result-oriented legal services 
-        through expert guidance,    strategic representation, and ethical legal practice.</p>
-</div>
-
-<div className="bg-white rounded-2xl shadow-md p-6 border-t-4 border-yellow-500 hover:-translate-x-2 transition duration-300" >
-
-    <h3 className="text-2xl font-bold mb-3 text-gray-800 ">Our Commitment</h3>
-    <p className='text-gray-600 leading-relaxed'>At Incredible Law Chamber, we are committed to delivering legal services with integrity, confidentiality, and unwavering dedication. </p>
-</div>
-
-</div>
-
-</div>
-
      </section>
     )
 }
