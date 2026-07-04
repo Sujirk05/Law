@@ -195,96 +195,92 @@ transition={{ duration: 0.6, delay: 0.6 }}
        </div>
 </div>
 
-{/* why choose us section */}
-<div className="bg-slate-100 py-16 px-6">
-  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+{/* Why Choose Us Section */}
+<div className="bg-slate-100 py-20 px-6">
+  <div className="max-w-6xl mx-auto">
 
-   
-    <div>
-      <p className="uppercase tracking-[4px] text-yellow-500 font-semibold mb-3">
-        WHY CHOOSE US
-      </p>
+    {/* Top Content */}
+    <div className="grid md:grid-cols-2 gap-16 items-center">
 
-      <h1 className="text-slate-900 font-bold text-5xl leading-tight">
-        Trusted Legal Excellence
-      </h1>
+      {/* Left Side */}
+      <div>
+        <p className="uppercase tracking-[4px] text-yellow-500 font-semibold mb-4">
+          Why Choose Us
+        </p>
 
-      <div className="grid mt-8 gap-5">
+        <h2 className="text-5xl font-bold text-slate-900 leading-tight">
+          Trusted Legal Excellence
+        </h2>
 
-        <div className="w-full bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500 hover:translate-x-2 hover:shadow-xl transition duration-300">
-          <p className="text-gray-700 font-medium text-lg">
-            Expert Legal Guidance
-          </p>
-        </div>
+        <p className="text-gray-600 text-lg mt-6 leading-relaxed">
+          At Incredible Law Chamber, we combine legal expertise, strategic
+          representation, and personalized support to deliver reliable legal
+          solutions tailored to every client’s needs.
+        </p>
+      </div>
 
-        <div className="w-full bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500 hover:translate-x-2 hover:shadow-xl transition duration-300">
-          <p className="text-gray-700 font-medium text-lg">
-            Experienced Representation
-          </p>
-        </div>
-
-        <div className="w-full bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500 hover:translate-x-2 hover:shadow-xl transition duration-300">
-          <p className="text-gray-700 font-medium text-lg">
-            Client-Centered Approach
-          </p>
-        </div>
-
-        <div className="w-full bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500 hover:translate-x-2 hover:shadow-xl transition duration-300">
-          <p className="text-gray-700 font-medium text-lg">
-            Dedicated Support
-          </p>
-        </div>
-
-        <div className="w-full bg-white rounded-xl shadow-md p-5 border-l-4 border-yellow-500 hover:translate-x-2 hover:shadow-xl transition duration-300">
-          <p className="text-gray-700 font-medium text-lg">
-            Integrity & Confidentiality
-          </p>
-        </div>
-
+      {/* Right Side */}
+      <div className="space-y-4">
+        {[
+          "Expert Legal Guidance",
+          "Experienced Representation",
+          "Client-Centered Approach",
+          "Dedicated Support",
+          "Integrity & Confidentiality",
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-xl shadow-md px-6 py-5 flex items-center gap-4 hover:translate-x-2 transition duration-300"
+          >
+            <div className="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center font-bold">
+              ✓
+            </div>
+            <p className="text-gray-700 font-medium text-lg">{item}</p>
+          </div>
+        ))}
       </div>
     </div>
 
-   
-    <div className="grid gap-6">
+    {/* Bottom Cards */}
+    <div className="grid md:grid-cols-3 gap-8 mt-16">
 
-      <div className="bg-slate-900 rounded-2xl shadow-xl p-8 border-t-4 border-yellow-500 hover:-translate-x-2 transition duration-300">
+      <div className="bg-slate-900 rounded-2xl shadow-xl p-8 border-t-4 border-yellow-500 hover:-translate-y-2 transition duration-300">
         <h3 className="text-3xl font-bold mb-4 text-white">
           Our Vision
         </h3>
 
-        <p className="text-gray-300 leading-relaxed text-lg">
+        <p className="text-gray-300 leading-relaxed">
           To be a trusted and respected legal institution recognized for
-          excellence, integrity, and unwavering commitment to justice,
-          delivering reliable legal solutions to every client.
+          excellence, integrity, and commitment to justice.
         </p>
       </div>
 
-      <div className="bg-slate-900 rounded-2xl shadow-xl p-8 border-t-4 border-yellow-500 hover:-translate-x-2 transition duration-300">
+      <div className="bg-slate-900 rounded-2xl shadow-xl p-8 border-t-4 border-yellow-500 hover:-translate-y-2 transition duration-300">
         <h3 className="text-3xl font-bold mb-4 text-white">
           Our Mission
         </h3>
 
-        <p className="text-gray-300 leading-relaxed text-lg">
-          Our mission is to provide reliable, client-focused, and
-          result-oriented legal services through expert guidance,
-          strategic representation, and ethical legal practice.
+        <p className="text-gray-300 leading-relaxed">
+          To provide reliable, client-focused legal services through expert
+          guidance and ethical legal practice.
         </p>
       </div>
 
-      <div className="bg-slate-900 rounded-2xl shadow-xl p-8 border-t-4 border-yellow-500 hover:-translate-x-2 transition duration-300">
+      <div className="bg-slate-900 rounded-2xl shadow-xl p-8 border-t-4 border-yellow-500 hover:-translate-y-2 transition duration-300">
         <h3 className="text-3xl font-bold mb-4 text-white">
           Our Commitment
         </h3>
 
-        <p className="text-gray-300 leading-relaxed text-lg">
-          At Incredible Law Chamber, we are committed to delivering legal
-          services with integrity, confidentiality, and unwavering dedication.
+        <p className="text-gray-300 leading-relaxed">
+          We deliver legal services with integrity, confidentiality, and
+          unwavering dedication.
         </p>
       </div>
 
     </div>
   </div>
 </div>
+
      </section>
     )
 }

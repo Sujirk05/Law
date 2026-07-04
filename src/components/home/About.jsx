@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <section  id="About"  className="   relative w-full py-28 px-6 lg:px-16 overflow-hidden scroll-mt-24   bg-gradient-to-r from-black via-[#0B1628] to-[#111111]    border-y border-yellow-500/10  "   >
+    <section  id="About"  className="   relative w-full py-16 md:py-28 px-4  md:px-6 sm:px-6 lg:px-16 overflow-hidden scroll-mt-24   bg-gradient-to-r from-black via-[#0B1628] to-[#111111]    border-y border-yellow-500/10  "   >
       
       <div className="absolute top-24 right-24 w-96 h-96 bg-yellow-500/10 blur-[140px] rounded-full" />
       <div className="absolute bottom-10 left-10 w-72 h-72 bg-yellow-500/5 blur-[120px] rounded-full" />
@@ -25,12 +25,13 @@ function About() {
               shadow-[0_0_40px_rgba(234,179,8,0.12)]
             "
           >
-            <img   src="/images/bg2.jpg"   alt="Law Office"  className="  w-full h-[500px] object-cover  brightness-105 contrast-110    hover:scale-[1.02]   transition duration-700   " />
+            <img   src="/images/bg2.jpg"   alt="Law Office"  className="  w-full h-[320px] sm:h-[400px] lg:h-[500px] object-cover  brightness-105 contrast-110    hover:scale-[1.02]   transition duration-700   " />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div> 
           <div
             className="
+             hidden sm:block
               absolute -top-5 right-[-15px]
               bg-black/40 backdrop-blur-md
               border border-yellow-500/30
@@ -43,6 +44,7 @@ function About() {
          
           <div
             className="
+             hidden sm:block
               absolute bottom-10 -left-14
               bg-black/40 backdrop-blur-md
               border border-yellow-500/30
@@ -54,6 +56,7 @@ function About() {
 
           <div
             className="
+             hidden sm:block
               absolute bottom-6 -right-4
               bg-black/40 backdrop-blur-md
               border border-yellow-500/30
@@ -69,13 +72,13 @@ function About() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.2 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="max-w-2xl"
+          className="max-w-[340px] sm:max-w-2xl"
         >
           <p className="uppercase tracking-[0.35em] text-yellow-400 font-semibold">
             About Us
           </p>
 
-          <h2 className="text-4xl lg:text-5xl font-bold mt-6 text-white leading-tight">
+          <h2 className="text-2xl sm:text-4xl  lg:text-5xl font-bold mt-6 text-white leading-tight">
             Dedicated to Justice,
             <br />
             Committed to Excellence
@@ -94,15 +97,15 @@ function About() {
             strong representation in every case.
           </p>
 
-          <div className="mt-12 flex gap-5">
+          <div className="mt-8 md:mt-12 flex gap-3 md:gap-5">
             <Link to="/Aboutpage">
               <button
-                className=" px-10 py-5 bg-yellow-500 text-black font-semibold    rounded-2xl hover:scale-105   transition duration-300 shadow-xl   "  >
+                className="px-6 py-3 md:px-10 md:py-5 bg-yellow-500 text-black font-semibold rounded-2xl hover:scale-105 transition duration-300 shadow-xl"  >
                 Learn More
               </button>
             </Link>
            <Link to="/Contactpage">
-            <button className="  px-10 py-5 border border-yellow-500  text-yellow-400 rounded-2xl   hover:bg-yellow-500 hover:text-black   transition duration-300 "  >
+            <button className="px-6 py-3 md:px-10 md:py-5 border border-yellow-500 text-yellow-400 rounded-2xl hover:bg-yellow-500 hover:text-black transition duration-300"  >
               Contact Us
             </button>
             </Link>

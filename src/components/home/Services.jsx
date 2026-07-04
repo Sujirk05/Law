@@ -55,7 +55,7 @@ function Services() {
   return (
     <section
       id="Services"
-      className="w-full py-24 px-6 bg-gradient-to-b from-white to-slate-100 scroll-mt-24"
+      className="w-full py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-b from-white to-slate-100 scroll-mt-24"
     >
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
@@ -63,23 +63,24 @@ function Services() {
           OUR SERVICES
         </p>
 
-        <h2 className="text-5xl font-bold text-center mt-4 text-slate-900">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mt-4 text-slate-900">
           Comprehensive Legal Solutions
         </h2>
 
-        <p className="text-gray-600 text-center mt-4 max-w-3xl mx-auto text-lg leading-relaxed">
+        <p className="text-gray-600 text-center mt-4 max-w-3xl mx-auto text-base lg:text-lg leading-relaxed">
           We provide expert legal guidance and strategic representation across
           multiple legal domains to protect your rights and interests.
         </p>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 mt-10 md:mt-16">
+      {(window.innerWidth < 768 ? services.slice(0, 4) : services).map(
+  (service, index) => (
             <div
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className="group relative h-[440px] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 cursor-pointer"
+              className="group relative h-[360px] sm:h-[400px] md:h-[440px] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 cursor-pointer"
             >
               {/* Background Image */}
               <img
@@ -92,12 +93,12 @@ function Services() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10"></div>
 
               {/* Content */}
-              <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <h3 className="text-3xl font-bold text-white">
+              <div className="absolute inset-0 p-5 sm:p-6 md:p-8 flex flex-col justify-end">
+                <h3 className="text-2xl md:text-3xl font-bold text-white">
                   {service.title}
                 </h3>
 
-                <p className="text-gray-200 mt-4 text-lg leading-relaxed">
+                <p className="text-gray-200 mt-4 text-sm sm:text-base md:text-lg leading-relaxed">
                   {service.description}
                 </p>
 
@@ -107,9 +108,20 @@ function Services() {
                 >
                   Book Consultation →
                 </Link>
+                
               </div>
+              
             </div>
+            
           ))}
+        </div>
+        {/* View More Button - mobile only */}
+        <div className="md:hidden mt-10 flex justify-center">
+          <Link to="/Servicepage">
+            <button className="px-8 py-4 bg-yellow-500 text-black font-semibold rounded-2xl hover:scale-105 transition duration-300">
+              View More Services
+            </button>
+          </Link>
         </div>
       </div>
     </section>

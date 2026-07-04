@@ -33,21 +33,20 @@ function Faq() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="bg-gradient-to-b from-[#f8fafc] to-[#eef2f7] py-20 px-6">
+  <section className="bg-gradient-to-b from-[#f8fafc] to-[#eef2f7] py-14 lg:py-20 px-4 lg:px-6">
      
       <div className="text-center">
-        <h1 className="text-5xl font-bold text-slate-900">
+     <h1 className="text-3xl lg:text-5xl font-bold text-slate-900">
           Frequently Asked Questions
         </h1>
 
-        <p className="text-slate-600 mt-4 max-w-3xl mx-auto text-lg leading-relaxed">
+       <p className="text-slate-600 mt-4 max-w-3xl mx-auto text-sm lg:text-lg leading-relaxed px-2">
           Find answers to common legal questions and learn how we can assist
           you with confidence and clarity.
         </p>
       </div>
 
-    
-      <div className="max-w-5xl mx-auto mt-14 space-y-5">
+    <div className="max-w-5xl mx-auto mt-10 lg:mt-14 space-y-4 lg:space-y-5">
         {faq.map((item, index) => {
           const isOpen = openIndex === index;
 
@@ -59,13 +58,13 @@ function Faq() {
            
               <div
                 onClick={() => setOpenIndex(isOpen ? null : index)}
-                className="cursor-pointer px-8 py-6 flex justify-between items-center"
+           className="cursor-pointer px-4 py-4 lg:px-8 lg:py-6 flex justify-between items-center gap-3"
               >
-                <p className="text-xl text-slate-900 font-semibold">
+               <p className="text-base lg:text-xl text-slate-900 font-semibold">
                   {item.question}
                 </p>
 
-                <div className="w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center text-black text-2xl font-bold shadow-md">
+                <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-yellow-500 flex items-center justify-center text-black text-xl lg:text-2xl font-bold shadow-md shrink-0">
                   {isOpen ? "−" : "+"}
                 </div>
               </div>
@@ -80,10 +79,10 @@ function Faq() {
                     transition={{ duration: 0.35 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-8 pb-6">
+                  <div className="px-4 pb-4 lg:px-8 lg:pb-6">
                       <div className="h-[1px] bg-yellow-500/20 mb-5"></div>
 
-                      <p className="text-slate-600 leading-relaxed text-lg">
+                      <p className="text-slate-600 leading-relaxed text-sm lg:text-lg">
                         {item.answer}
                       </p>
                     </div>

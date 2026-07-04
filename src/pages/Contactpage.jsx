@@ -21,14 +21,16 @@ function Contactpage() {
 {/* contact card section */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 p-4">
                 <div className="bg-gray-100 rounded-xl shadow-md p-6 text-center hover:-translate-y-2 transition duration-300">
-                    <img src="/images/phone.svg" className="w-10 h-10 mx-auto" />
+                    <a  href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
+                   <img src="/images/phone.svg" className="w-10 h-10 mx-auto" />       
                     <p className="text-xl font-bold text-gray-700">Call Us</p>
-                  <h2 >+91 98765 43210</h2>
+                  <h2 >+91 98765 43210</h2></a>
                 </div>
                 <div className="bg-gray-100 rounded-xl shadow-md p-6 text-center hover:-translate-y-2 transition duration-300">
+                    <a href="mailto:contact@incredible.com">
                     <img src="/images/gmail.png" className="w-10 h-10 mx-auto"/>
                     <p className="text-xl font-semibold text-gray-700">Email </p>
-                    <h2 >contact@incredible.com</h2>
+                    <h2 >contact@incredible.com</h2></a>
                 </div>
                 <div className="bg-gray-100 rounded-xl shadow-md p-6 text-center hover:-translate-y-2 transition duration-300">
                      <img src="/images/map.svg" className="w-10 h-10 mx-auto"/>

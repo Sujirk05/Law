@@ -7,7 +7,7 @@ import Servicepage from "./pages/Servicepage";
 import Contactpage from "./pages/Contactpage";
 import Home from "./components/home/Home";
 import Aboutpage from "./pages/Aboutpage";
-
+import ScrollToTop from "./components/home/ScrollToTop";
 import './App.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -26,7 +26,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-   
+      <ScrollToTop />
       <Routes>
       < Route path="/" element={<Home />} />
         <Route path="/Aboutpage" element={<Aboutpage />} />
