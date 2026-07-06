@@ -53,10 +53,7 @@ function Services() {
   ];
 
   return (
-    <section
-      id="Services"
-      className="w-full py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-b from-white to-slate-100 scroll-mt-24"
-    >
+    <section id="Services"  className="w-full py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-b from-white to-slate-100 scroll-mt-24"  >
       <div className="max-w-7xl mx-auto">
      
         <p className="text-yellow-600 font-semibold tracking-[4px] text-center text-xl">
@@ -80,19 +77,12 @@ function Services() {
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className="group relative h-[360px] sm:h-[400px] md:h-[440px] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 cursor-pointer"
-            >
+              className="group relative h-[360px] sm:h-[400px] md:h-[440px] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 cursor-pointer"     >
           
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-              />
+              <img src={service.image}alt={service.title}  className="w-full h-full object-cover group-hover:scale-110 transition duration-700"  />
 
-         
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10"></div>
 
-        
               <div className="absolute inset-0 p-5 sm:p-6 md:p-8 flex flex-col justify-end">
                 <h3 className="text-2xl md:text-3xl font-bold text-white">
                   {service.title}
@@ -122,6 +112,7 @@ function Services() {
             </button>
           </Link>
         </div>
+        
       </div>
     </section>
   );

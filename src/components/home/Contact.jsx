@@ -27,8 +27,7 @@ function Contact() {
   return (
     <section
       id="Contact"
-     className="w-full py-14 lg:py-20 px-4 lg:px-6 bg-gradient-to-r from-slate-950 via-gray-900 to-black text-white scroll-mt-24"
-    >
+     className="w-full py-14 lg:py-20 px-4 lg:px-6 bg-gradient-to-r from-slate-950 via-gray-900 to-black text-white scroll-mt-24" >
       <div className="w-[90%] max-w-[1500px] mx-auto">
        
         <p className="text-yellow-500 font-semibold text-lg lg:text-2xl tracking-widest text-center">
@@ -48,10 +47,9 @@ function Contact() {
        
           <div className="space-y-6">
             {contactInfo.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white/5 border border-yellow-500/20 rounded-2xl p-5 lg:p-6 hover:-translate-y-1 hover:border-yellow-400 transition-all duration-300"
-              >
+              <div key={index}
+                className="bg-white/5 border border-yellow-500/20 rounded-2xl p-5 lg:p-6 hover:-translate-y-1 hover:border-yellow-400 
+                transition-all duration-300"  >
                 <div className="flex items-center gap-4 mb-3">
                   <div className="text-yellow-400 scale-90 lg:scale-100">{item.icon}</div>
 
@@ -66,31 +64,23 @@ function Contact() {
           </div>
 
           <form className="bg-white rounded-2xl p-6 lg:p-10 shadow-2xl space-y-5">
-            <input
-              type="text"
-              placeholder="Full Name"
-            className="w-full p-3 lg:p-4 rounded-xl border border-gray-300 text-black text-sm lg:text-base focus:outline-none focus:border-yellow-500"
-            />
+            <input type="text" placeholder="Full Name"
+            className="w-full p-3 lg:p-4 rounded-xl border border-gray-300 text-black text-sm lg:text-base focus:outline-none
+             focus:border-yellow-500"  />
 
-            <input
-              type="email"
-              placeholder="Email Address"
-             className="w-full p-3 lg:p-4 rounded-xl border border-gray-300 text-black text-sm lg:text-base focus:outline-none focus:border-yellow-500"
-            />
+            <input  type="email"placeholder="Email Address"
+             className="w-full p-3 lg:p-4 rounded-xl border border-gray-300 text-black text-sm lg:text-base focus:outline-none
+              focus:border-yellow-500" />
 
-            <input
-              type="text"
-              placeholder="Phone Number"
-           className="w-full p-3 lg:p-4 rounded-xl border border-gray-300 text-black text-sm lg:text-base focus:outline-none focus:border-yellow-500"
-            />
+            <input  type="text" placeholder="Phone Number"
+           className="w-full p-3 lg:p-4 rounded-xl border border-gray-300 text-black text-sm lg:text-base focus:outline-none focus:border-yellow-500"   />
 
-            <textarea
-              rows="5"
-              placeholder="Your Message"
-            className="w-full p-3 lg:p-4 rounded-xl border border-gray-300 text-black text-sm lg:text-base focus:outline-none focus:border-yellow-500 resize-none"
-            ></textarea>
+            <textarea rows="5" placeholder="Your Message"
+            className="w-full p-3 lg:p-4 rounded-xl border border-gray-300 text-black text-sm lg:text-base
+             focus:outline-none focus:border-yellow-500 resize-none"  ></textarea>
 
-            <button className="w-full bg-yellow-500 text-black py-3 lg:py-4 rounded-xl font-semibold text-base lg:text-lg shadow-lg hover:bg-yellow-400 hover:shadow-yellow-500/40 hover:scale-[1.02] transition-all duration-300">
+            <button className="w-full bg-yellow-500 text-black py-3 lg:py-4 rounded-xl font-semibold text-base lg:text-lg shadow-lg
+             hover:bg-yellow-400 hover:shadow-yellow-500/40 hover:scale-[1.02] transition-all duration-300">
               Book Consultation
             </button>
           </form>

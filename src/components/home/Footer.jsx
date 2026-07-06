@@ -1,4 +1,14 @@
+
+import {Link} from "react-router-dom"
 function Footer() {
+  
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+   
+  };
   return (
     <footer className="w-full bg-black text-white px-5 lg:px-10 py-10 lg:py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
@@ -20,10 +30,26 @@ function Footer() {
           </h3>
 
           <ul className="mt-3 lg:mt-4 space-y-4 lg:space-y-3 text-gray-400 text-sm lg:text-base" style={{fontFamily:"Inter"}}>
-            <li><a href="/" className="hover:text-yellow-400">Home</a></li>
-            <li><a href="/Aboutpage" className="hover:text-yellow-400">About</a></li>
-            <li><a href="/Servicepage" className="hover:text-yellow-400">Services</a></li>
-            <li><a href="/Contactpage" className="hover:text-yellow-400">Contact</a></li>
+          <li>
+    <Link to="/" onClick={scrollTop} className="hover:text-yellow-400">
+      Home
+    </Link>
+  </li>
+              <li>
+    <Link to="/Aboutpage" onClick={scrollTop} className="hover:text-yellow-400">
+      About
+    </Link>
+  </li>
+             <li>
+    <Link to="/Servicepage" onClick={scrollTop} className="hover:text-yellow-400">
+      Services
+    </Link>
+  </li>
+            <li>
+    <Link to="/Contactpage" onClick={scrollTop} className="hover:text-yellow-400">
+      Contact
+    </Link>
+  </li>
           </ul>
         </div>
 

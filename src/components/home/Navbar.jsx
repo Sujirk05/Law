@@ -15,16 +15,14 @@ function Navbar() {
   return (
     <header className="w-full bg-black text-white shadow-lg sticky top-0 z-50">
       
-    
       <div className="w-full px-4 py-1 flex items-center justify-between">
-        
-       
+      
         <Link to="/" onClick={scrollTop}>
-          <img  src="/images/logo1.svg"  alt="Incredible Law Chamber"   className="h-16 md:h-28 w-auto"  />
+          <img src="/images/logo1.svg"alt="Incredible Law Chamber"className="h-14 md:h-24 w-auto"/>
         </Link>
 
-     
         <div className="hidden md:flex items-center gap-8">
+
           <nav  className="flex gap-8 text-xl font-medium"  style={{ fontFamily: "Poppins" }} >
             <NavLink to="/" end  className={({ isActive }) => isActive ? "text-yellow-500" : "text-white"  }  onClick={scrollTop}>
               Home
@@ -46,9 +44,9 @@ function Navbar() {
           <Link  to="/Appointpage" onClick={scrollTop}  className="bg-yellow-500 text-black px-4 py-3 rounded-lg font-semibold"  style={{ fontFamily: "Poppins" }} >
             Book Appointment
           </Link>
+
         </div>
 
-      
         <button  className="md:hidden text-3xl text-white"  onClick={() => setMenuOpen(!menuOpen)}  >
           <img src="/images/menu.svg" alt="Menu"  />
         </button>
@@ -57,10 +55,8 @@ function Navbar() {
      
       {menuOpen && (
         <div className="md:hidden bg-black px-4 pb-4">
-          <nav
-            className="flex flex-col gap-4 text-lg font-medium"
-            style={{ fontFamily: "Poppins" }}
-          >
+          <nav   className="flex flex-col gap-4 text-lg font-medium"   style={{ fontFamily: "Poppins" }}  >
+
             <NavLink  to="/"  end  className={({ isActive }) =>    isActive ? "text-yellow-500" : "text-white" }  onClick={scrollTop}>
               Home
             </NavLink>
@@ -80,6 +76,7 @@ function Navbar() {
             <Link to="/Appointpage" onClick={scrollTop} className="bg-yellow-500 text-black px-4 py-3 rounded-lg font-semibold text-center"  >
               Book Appointment
             </Link>
+            
           </nav>
         </div>
       )}

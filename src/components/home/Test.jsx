@@ -65,10 +65,7 @@ function Test() {
   }
 
  return (
-  <section
-    id="Test"
-    className="bg-gradient-to-r from-slate-950 via-gray-900 to-black py-20 px-4 lg:px-6 overflow-hidden"
-  >
+  <section  id="Test" className="bg-gradient-to-r from-slate-950 via-gray-900 to-black py-20 px-4 lg:px-6 overflow-hidden">
     {/* Heading */}
     <div className="text-center mb-14">
       <h1 className="text-white text-3xl lg:text-5xl font-bold p-4">
@@ -93,13 +90,9 @@ function Test() {
             stiffness: 120,
             damping: 18,
           }}
-          className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl border border-yellow-500/20 shadow-[0_20px_80px_rgba(0,0,0,0.55)] overflow-hidden"
-        >
-          <img
-            src={active.image}
-            alt={active.name}
-            className="w-full h-64 object-cover"
-          />
+          className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl border border-yellow-500/20 
+          shadow-[0_20px_80px_rgba(0,0,0,0.55)] overflow-hidden" >
+          <img  src={active.image}  alt={active.name}  className="w-full h-64 object-cover"  />
 
           <div className="p-6">
             <div className="w-14 h-14 rounded-full bg-yellow-500 text-white flex items-center justify-center text-3xl mb-5">
@@ -126,17 +119,12 @@ function Test() {
 
         {/* Mobile Buttons */}
         <div className="flex justify-center gap-4 mt-6">
-          <button
-            onClick={prevSlide}
-            className="w-12 h-12 rounded-full bg-gray-800 text-white border border-yellow-500/30 flex justify-center items-center text-3xl"
-          >
+          <button onClick={prevSlide}  className="w-12 h-12 rounded-full bg-gray-800 text-white border border-yellow-500/30 
+            flex justify-center items-center text-3xl"   >
            <img src="./images/arrowleft.png"/>
           </button>
 
-          <button
-            onClick={nextSlide}
-            className="w-12 h-12 rounded-full bg-yellow-500 text-white flex justify-center items-center text-3xl"
-          >
+          <button  onClick={nextSlide}  className="w-12 h-12 rounded-full bg-yellow-500 text-white flex justify-center items-center text-3xl" >
             <img src="./images/arrowright.png"/>
           </button>
         </div>
@@ -149,8 +137,8 @@ function Test() {
         {/* Previous Button */}
         <button
           onClick={prevSlide}
-          className="absolute right-24 bottom-0 z-40 w-16 h-16 rounded-full bg-gray-800 text-white border border-yellow-500/30 shadow-lg flex justify-center items-center text-4xl hover:scale-110 transition duration-300"
-        >
+          className="absolute right-24 bottom-0 z-40 w-16 h-16 rounded-full bg-gray-800 text-white border border-yellow-500/30 shadow-lg 
+          flex justify-center items-center text-4xl hover:scale-110 transition duration-300" >
           <img src="./images/arrowleft.png"/>
         </button>
 
@@ -165,15 +153,11 @@ function Test() {
             stiffness: 120,
             damping: 18,
           }}
-          className="w-[1250px] h-[500px] bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl border border-yellow-500/20 shadow-[0_20px_80px_rgba(0,0,0,0.55)] overflow-hidden flex"
-        >
+          className="w-[1250px] h-[500px] bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl border border-yellow-500/20 
+          shadow-[0_20px_80px_rgba(0,0,0,0.55)] overflow-hidden flex" >
           {/* Left Image */}
           <div className="w-[35%]">
-            <img
-              src={active.image}
-              alt={active.name}
-              className="w-full h-full object-cover"
-            />
+            <img  src={active.image}  alt={active.name} className="w-full h-full object-cover" />
           </div>
 
           {/* Right Content */}
@@ -201,12 +185,11 @@ function Test() {
         </motion.div>
 
         {/* Next Button */}
-        <button
-          onClick={nextSlide}
-          className="absolute right-0 bottom-0 z-40 w-16 h-16 rounded-full bg-yellow-500 text-white shadow-lg flex justify-center items-center text-4xl hover:scale-110 transition duration-300"
-        >
+        <button onClick={nextSlide}  className="absolute right-0 bottom-0 z-40 w-16 h-16 rounded-full bg-yellow-500 text-white shadow-lg 
+             flex justify-center items-center text-4xl hover:scale-110 transition duration-300"  >
            <img src="./images/arrowright.png"/>
         </button>
+        
       </div>
     </div>
   </section>

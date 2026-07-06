@@ -84,14 +84,8 @@ function Cards() {
                 hover:shadow-2xl
                 hover:-translate-y-3
                 transition duration-300
-                flex flex-col
-              "
-            >
-              <img
-                src={card.image}
-                alt={card.title}
-                className="w-full h-52 sm:h-56 lg:h-44 object-cover"
-              />
+                flex flex-col "   >
+              <img  src={card.image} alt={card.title}  className="w-full h-52 sm:h-56 lg:h-44 object-cover"  />
 
               <div className="p-4 lg:p-5 flex flex-col flex-grow">
                 <h3 className="text-lg lg:text-xl font-bold text-slate-900 min-h-[48px]">
@@ -103,7 +97,8 @@ function Cards() {
                 </p>
 
                 <a href="/Appointpage" className="mt-5">
-                  <button className="w-full bg-yellow-500 text-black py-3 lg:py-2.5 rounded-xl font-semibold text-sm lg:text-base hover:bg-yellow-400 transition duration-300">
+                  <button className="w-full bg-yellow-500 text-black py-3 lg:py-2.5 rounded-xl font-semibold text-sm lg:text-base
+                   hover:bg-yellow-400 transition duration-300">
                     Book Appointment
                   </button>
                 </a>

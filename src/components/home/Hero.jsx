@@ -4,20 +4,9 @@ function Hero() {
       <div className="relative w-full md:h-full">
 
   
-        <img  src="/images/bg1.jpg"   alt="Law Hero"   className="absolute inset-0 w-full h-full object-cover" />
-      
-        <div
-          className="
-            absolute inset-y-0 left-0 w-full md:w-[52%]
-            bg-gradient-to-r
-            from-white/90
-            via-white/80
-           md:via-white/45
-            to-transparent
-            backdrop-blur-[2px]   "
-        ></div>
-
-      
+        <img  src="/images/bg.jpg"   alt="Law Hero"   className="absolute inset-0 w-full h-full object-cover" />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/30"></div>
+ 
         <div className="relative z-10 md:h-full flex items-start md:items-center">
   <div className="w-full pt-6 sm:pt-8 md:pt-0  px-6 sm:px-8 md:px-20 lg:px-28">
     <div className="max-w-full md:max-w-3xl">
@@ -25,31 +14,36 @@ function Hero() {
               TRUSTED LEGAL EXPERTISE
             </p>
 
-            <h1
-              className="mt-5 text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-blue-900"
+          <h1
+              className="mt-5 lg:mt-6 text-3xl sm:text-5xl md:text-4xl lg:text-5xl font-bold leading-tight lg:leading-[1.1] text-white"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
-              Incredible Law Chamber
+              Justice. Integrity. Results.
             </h1>
-
-            <p className="mt-7 text-base sm:text-lg md:text-2xl text-gray-700 leading-relaxed max-w-2xl">
-              Protecting your rights with integrity, precision, and decades of
-              legal excellence.
+   <p
+              className="mt-6 lg:mt-8 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 leading-relaxed"
+              style={{ fontFamily: "Poppins" }}
+            >
+              Protecting your rights with trusted legal expertise,
+              strategic counsel, and unwavering commitment.
             </p>
 
-            <p className="mt-3 text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl">
-              We provide strategic legal solutions tailored to individuals,
-              families, and businesses.
+            {/* Secondary Text */}
+            <p
+              className="mt-4 lg:mt-5 text-sm sm:text-base md:text-xl text-gray-300 leading-7 lg:leading-8"
+              style={{ fontFamily: "Poppins" }}
+            >
+              We provide tailored legal solutions for individuals,
+              families, and businesses with professionalism,
+              transparency, and results you can trust.
             </p>
-
           
-            <div className="mt-10 ml-1 sm:ml-0 ">
+            <div className="mt-4 ml-1 sm:ml-0 ">
               
-               <a href="/Appointpage" className="inline-flex items-center gap-2 text-blue-900 font-medium text-lg group">
-              <button className="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg sm:px-5 ">
-                Book  Appointment
-              </button>
-            </a>
+               <button className="mt-6 bg-yellow-500 text-black px-5 lg:px-6 py-3 lg:py-4 rounded-xl font-semibold text-sm lg:text-base hover:bg-yellow-400 hover:scale-105 transition duration-300 shadow-lg">
+                  <a href="/Appointpage">Book Appointment</a>
+                </button>
+           
             </div>
 </div>
           </div>
