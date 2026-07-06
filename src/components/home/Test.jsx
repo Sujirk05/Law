@@ -103,7 +103,7 @@ function Test() {
 
           <div className="p-6">
             <div className="w-14 h-14 rounded-full bg-yellow-500 text-white flex items-center justify-center text-3xl mb-5">
-              ❝
+              <img src="./images/quotes.png" alt="Quote" className="w-5 h-5"/>
             </div>
 
             <h3 className="text-2xl font-bold text-white">
@@ -130,14 +130,14 @@ function Test() {
             onClick={prevSlide}
             className="w-12 h-12 rounded-full bg-gray-800 text-white border border-yellow-500/30 flex justify-center items-center text-3xl"
           >
-            ‹
+           <img src="./images/arrowleft.png"/>
           </button>
 
           <button
             onClick={nextSlide}
             className="w-12 h-12 rounded-full bg-yellow-500 text-white flex justify-center items-center text-3xl"
           >
-            ›
+            <img src="./images/arrowright.png"/>
           </button>
         </div>
       </div>
@@ -151,7 +151,7 @@ function Test() {
           onClick={prevSlide}
           className="absolute right-24 bottom-0 z-40 w-16 h-16 rounded-full bg-gray-800 text-white border border-yellow-500/30 shadow-lg flex justify-center items-center text-4xl hover:scale-110 transition duration-300"
         >
-          ‹
+          <img src="./images/arrowleft.png"/>
         </button>
 
         {/* Desktop Card */}
@@ -179,7 +179,7 @@ function Test() {
           {/* Right Content */}
           <div className="w-[65%] px-14 py-16 flex flex-col justify-center">
             <div className="w-20 h-20 rounded-full bg-yellow-500 text-white flex items-center justify-center text-5xl mb-8 shadow-lg">
-              ❝
+               <img src="./images/quotes.png" alt="Quote" className="w-10 h-10"/>
             </div>
 
             <h3 className="text-4xl font-bold text-white">
@@ -205,7 +205,7 @@ function Test() {
           onClick={nextSlide}
           className="absolute right-0 bottom-0 z-40 w-16 h-16 rounded-full bg-yellow-500 text-white shadow-lg flex justify-center items-center text-4xl hover:scale-110 transition duration-300"
         >
-          ›
+           <img src="./images/arrowright.png"/>
         </button>
       </div>
     </div>

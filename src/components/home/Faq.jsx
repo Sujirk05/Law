@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { FiPlus, FiMinus } from "react-icons/fi";
+import { DiVim } from "react-icons/di";
 function Faq() {
   const faq = [
     {
@@ -64,9 +65,13 @@ function Faq() {
                   {item.question}
                 </p>
 
-                <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-yellow-500 flex items-center justify-center text-black text-xl lg:text-2xl font-bold shadow-md shrink-0">
-                  {isOpen ? "−" : "+"}
-                </div>
+                <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-yellow-500 flex items-center justify-center shadow-md shrink-0">
+  {isOpen ? (
+    <FiMinus className="text-black text-lg lg:text-xl" />
+  ) : (
+    <FiPlus className="text-black text-lg lg:text-xl" />
+  )}
+</div>
               </div>
 
               
