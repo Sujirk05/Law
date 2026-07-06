@@ -51,18 +51,18 @@ function Cards() {
   ];
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-12 lg:py-20 px-4 lg:px-6 bg-white">
       {/* Heading */}
-      <div className="text-center mb-14">
-        <p className="text-yellow-500 font-semibold uppercase tracking-[3px] mb-3">
+      <div className="text-center mb-10 lg:mb-14">
+        <p className="text-yellow-500 font-semibold uppercase tracking-[2px] lg:tracking-[3px] text-sm lg:text-base mb-3">
           Our Expertise
         </p>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
           Legal Services We Offer
         </h2>
 
-        <p className="max-w-3xl mx-auto mt-6 text-gray-600 leading-relaxed">
+        <p className="max-w-3xl mx-auto mt-4 lg:mt-6 text-base lg:text-lg text-gray-600 leading-relaxed px-2">
           We provide comprehensive legal assistance across multiple practice
           areas, delivering trusted advice, strong representation, and
           practical legal solutions tailored to every client.
@@ -71,7 +71,7 @@ function Cards() {
 
       {/* Cards */}
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {cards.map((card, index) => (
             <div
               key={index}
@@ -90,20 +90,20 @@ function Cards() {
               <img
                 src={card.image}
                 alt={card.title}
-                className="w-full h-44 object-cover"
+                className="w-full h-52 sm:h-56 lg:h-44 object-cover"
               />
 
-              <div className="p-5 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-slate-900 min-h-[48px]">
+              <div className="p-4 lg:p-5 flex flex-col flex-grow">
+                <h3 className="text-lg lg:text-xl font-bold text-slate-900 min-h-[48px]">
                   {card.title}
                 </h3>
 
-                <p className="text-gray-600 mt-4 leading-relaxed flex-grow">
+                <p className="text-gray-600 text-sm lg:text-base mt-3 lg:mt-4 leading-relaxed flex-grow">
                   {card.description}
                 </p>
 
                 <a href="/Appointpage" className="mt-5">
-                  <button className="w-full bg-yellow-500 text-black py-2.5 rounded-xl font-semibold hover:bg-yellow-400 transition duration-300">
+                  <button className="w-full bg-yellow-500 text-black py-3 lg:py-2.5 rounded-xl font-semibold text-sm lg:text-base hover:bg-yellow-400 transition duration-300">
                     Book Appointment
                   </button>
                 </a>
