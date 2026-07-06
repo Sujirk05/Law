@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
 function Appointpage(){
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent page refresh
+
+    // Your form logic here
+    console.log("Form submitted");
+  };
     return(
        <>
            {/* book appointment hero section */}
@@ -32,6 +38,7 @@ function Appointpage(){
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          onSubmit={handleSubmit}
         >
           <div className="text-center mb-10">
             <h1 className="text-3xl lg:text-4xl text-slate-700 font-bold">

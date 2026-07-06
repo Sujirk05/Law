@@ -1,6 +1,12 @@
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope,FaClock,} from "react-icons/fa";
 
 function Contact() {
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent page refresh
+
+    // Your form logic here
+    console.log("Form submitted");
+  };
   const contactInfo = [
     {
       icon: <FaMapMarkerAlt size={24} />,
@@ -63,7 +69,7 @@ function Contact() {
             ))}
           </div>
 
-          <form className="bg-white rounded-2xl p-6 lg:p-10 shadow-2xl space-y-5">
+          <form className="bg-white rounded-2xl p-6 lg:p-10 shadow-2xl space-y-5" onSubmit={handleSubmit}>
             <input type="text" placeholder="Full Name"
             className="w-full p-3 lg:p-4 rounded-xl border border-gray-300 text-black text-sm lg:text-base focus:outline-none
              focus:border-yellow-500"  />

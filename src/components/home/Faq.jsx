@@ -32,7 +32,21 @@ function Faq() {
   ];
 
   const [openIndex, setOpenIndex] = useState(null);
+const handleToggle = (index) => {
+  if (openIndex === index) {
+    setOpenIndex(null);
+    return;
+  }
+  if (openIndex !== null) {
+    setOpenIndex(null);
 
+    setTimeout(() => {
+      setOpenIndex(index);
+    }, 500); // wait for closing animation
+  } else {
+    setOpenIndex(index);
+  }
+};
   return (
   <section className="bg-gradient-to-b from-[#f8fafc] to-[#eef2f7] py-14 lg:py-20 px-4 lg:px-6">
      
@@ -55,7 +69,7 @@ function Faq() {
             <div key={index}
               className="bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-200 overflow-hidden transition-all duration-300" >
            
-              <div  onClick={() => setOpenIndex(isOpen ? null : index)}
+              <div  onClick={() => handleToggle(index)}
            className="cursor-pointer px-4 py-4 lg:px-8 lg:py-6 flex justify-between items-center gap-3" >
                <p className="text-base lg:text-xl text-slate-900 font-semibold">
                   {item.question}
@@ -70,13 +84,16 @@ function Faq() {
                    </div>
               </div>
 
-              <AnimatePresence>
+              <AnimatePresence mode="wait">
                 {isOpen && (
                   <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.35 }}
+                   initial={{ height: 0 }}
+                   animate={{ height: "auto" }}
+                   exit={{ height: 0 }}
+                    transition={{
+                     duration: 0.5,
+                     ease: "easeInOut",
+                     }}
                     className="overflow-hidden">
                   <div className="px-4 pb-4 lg:px-8 lg:pb-6">
                       <div className="h-[1px] bg-yellow-500/20 mb-5"></div>

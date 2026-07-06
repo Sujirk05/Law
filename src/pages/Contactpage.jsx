@@ -1,6 +1,12 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 function Contactpage() {
+    const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent page refresh
+
+    // Your form logic here
+    console.log("Form submitted");
+  };
     return(
         <section>
             {/* Contact Page Hero Section */}
@@ -53,7 +59,7 @@ function Contactpage() {
                 <h1 className="font-bold text-slate-600 text-2xl lg:text-4xl">Discuss Your Legal Matter</h1>
                 <p className="font-semibold text-slate-400  text-sm lg:text-base mt-2">Fill out the form below and our team will get back to you as soon as possible.</p>
                 </div>
-                <form className="mt-8" >
+                <form className="mt-8" onSubmit={handleSubmit} >
                     <div className="flex flex-col lg:flex-row gap-4">
                     <label className="font-medium lg:w-32 mt-4 lg:mt-6">First Name</label><input type="text" placeholder=" First Name" className="flex-1 border border-gray-300 outline-none pl-3 py-3 rounded-lg"></input>
                     <label  className="font-medium lg:w-32 mt-4 lg:mt-6">Last Name</label> <input type="text" placeholder=" Last Name" className="flex-1 border border-gray-300 outline-none pl-3 py-3 rounded-lg"></input>

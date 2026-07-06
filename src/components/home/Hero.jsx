@@ -20,10 +20,8 @@ function Hero() {
             >
               Justice. Integrity. Results.
             </h1>
-   <p
-              className="mt-6 lg:mt-8 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 leading-relaxed"
-              style={{ fontFamily: "Poppins" }}
-            >
+            <p  className="mt-6 lg:mt-8 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 leading-relaxed"
+              style={{ fontFamily: "Poppins" }}    >
               Protecting your rights with trusted legal expertise,
               strategic counsel, and unwavering commitment.
             </p>
