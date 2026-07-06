@@ -14,7 +14,7 @@ function Contactpage() {
   transition={{ duration: 0.8 }}
 >
             
-    <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white"  style={{ fontFamily: "cinzel" }} >Contact Us</h1>
+    <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white text-center"  style={{ fontFamily: "cinzel" }} >Contact Us</h1>
                 <p className="mt-3 lg:mt-4 text-sm sm:text-base lg:text-lg tracking-wide max-w-3xl text-center text-gray-200 px-4">Get trusted legal guidance tailored to your needs. Reach out today to schedule a consultation.</p> 
              </motion.div>
               </div> 
