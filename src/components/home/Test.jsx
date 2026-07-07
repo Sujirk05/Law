@@ -68,7 +68,7 @@ function Test() {
   <section  id="Test" className="bg-gradient-to-r from-slate-950 via-gray-900 to-black py-20 px-4 lg:px-6 overflow-hidden">
     {/* Heading */}
     <div className="text-center mb-14">
-      <h1 className="text-white text-3xl lg:text-5xl font-bold p-4">
+      <h1 className="text-white text-3xl lg:text-5xl font-medium p-4">
         What Our Clients Say
       </h1>
 
@@ -79,57 +79,63 @@ function Test() {
     </div>
 
     {/* ================= MOBILE VIEW ================= */}
-    <div className="block lg:hidden">
-      <div className="max-w-sm mx-auto">
+<div className="block lg:hidden">
+  <div className="max-w-sm mx-auto px-4 space-y-8">
+    {test.slice(0, 4).map((item, index) => {
+      const isLeft = index % 2 === 0;
+
+      return (
         <motion.div
-          key={current}
-          initial={{ x: 80, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          key={index}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{
-            type: "spring",
-            stiffness: 120,
-            damping: 18,
+            duration: 0.5,
+            delay: index * 0.15,
           }}
-          className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl border border-yellow-500/20 
-          shadow-[0_20px_80px_rgba(0,0,0,0.55)] overflow-hidden" >
-          <img  src={active.image}  alt={active.name}  className="w-full h-64 object-cover"  />
+          className={`relative ${isLeft ? "mr-6" : "ml-6"}`}
+        >
+          {/* Avatar */}
+          <img
+            src={item.image}
+            alt={item.name}
+            className={`absolute top-6 z-20 w-14 h-14 rounded-full object-cover border-4 border-slate-900 ${
+              isLeft ? "-left-6" : "-right-6"
+            }`}
+          />
 
-          <div className="p-6">
-            <div className="w-14 h-14 rounded-full bg-yellow-500 text-white flex items-center justify-center text-3xl mb-5">
-              <img src="./images/quotes.png" alt="Quote" className="w-5 h-5"/>
-            </div>
-
-            <h3 className="text-2xl font-bold text-white">
-              {active.name}
+          {/* Card */}
+          <div
+            className={`bg-white rounded-[28px] shadow-xl py-5 ${
+              isLeft ? "pl-16 pr-5" : "pl-5 pr-16"
+            }`}
+          >
+            {/* Name */}
+            <h3 className="text-sm font-bold text-gray-900">
+              {item.name}
             </h3>
 
-            <p className="text-gray-300 mt-2 text-sm">
-              {active.service}
+            {/* Service */}
+            <p className="text-[11px] text-gray-400 mt-1">
+              {item.service}
             </p>
 
-            <p className="text-yellow-400 text-lg mt-3 mb-4">
-              {"★".repeat(active.star)}
-            </p>
+            {/* Stars */}
+            <div className="text-yellow-500 text-sm mt-2">
+              {"★".repeat(item.star)}
+            </div>
 
-            <p className="text-sm text-gray-200 leading-relaxed">
-              {active.description}
+            {/* Review */}
+            <p className="text-xs text-gray-600 leading-5 mt-3">
+              {item.description}
             </p>
           </div>
         </motion.div>
-
-        {/* Mobile Buttons */}
-        <div className="flex justify-center gap-4 mt-6">
-          <button onClick={prevSlide}  className="w-12 h-12 rounded-full bg-gray-800 text-white border border-yellow-500/30 
-            flex justify-center items-center text-3xl"   >
-           <img src="./images/arrowleft.png"/>
-          </button>
-
-          <button  onClick={nextSlide}  className="w-12 h-12 rounded-full bg-yellow-500 text-white flex justify-center items-center text-3xl" >
-            <img src="./images/arrowright.png"/>
-          </button>
-        </div>
-      </div>
-    </div>
+      );
+    })}
+  </div>
+</div>
 
     {/* ================= DESKTOP VIEW ================= */}
     <div className="hidden lg:flex justify-center">

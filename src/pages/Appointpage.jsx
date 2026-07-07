@@ -20,7 +20,7 @@ function Appointpage(){
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
 >
-    <h1  className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white" style={{   fontFamily: "cinzel" }} >
+    <h1  className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white"  >
       Book an Appointment
     </h1>
 
@@ -167,8 +167,8 @@ function Appointpage(){
 
         
           <button
-           className="py-3 lg:py-4 w-full bg-yellow-500 rounded-lg font-semibold text-sm lg:text-base hover:bg-yellow-600 hover:-translate-y-1 transition duration-300 mt-8 lg:mt-10"
-            style={{ fontFamily: "Poppins" }}
+           className="py-3 lg:py-4 w-full bg-yellow-500 rounded-lg font-semibold font-serif text-sm lg:text-base hover:bg-yellow-600 hover:-translate-y-1 transition duration-300 mt-8 lg:mt-10"
+            
           >
             Book Appointment
           </button>

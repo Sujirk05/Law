@@ -51,7 +51,7 @@ const handleToggle = (index) => {
   <section className="bg-gradient-to-b from-[#f8fafc] to-[#eef2f7] py-14 lg:py-20 px-4 lg:px-6">
      
       <div className="text-center">
-     <h1 className="text-3xl lg:text-5xl font-bold text-slate-900">
+     <h1 className="text-3xl lg:text-5xl font-medium text-slate-900">
           Frequently Asked Questions
         </h1>
 
@@ -71,7 +71,7 @@ const handleToggle = (index) => {
            
               <div  onClick={() => handleToggle(index)}
            className="cursor-pointer px-4 py-4 lg:px-8 lg:py-6 flex justify-between items-center gap-3" >
-               <p className="text-base lg:text-xl text-slate-900 font-semibold">
+               <p className="text-base lg:text-xl text-slate-900 font-serif">
                   {item.question}
                 </p>
 

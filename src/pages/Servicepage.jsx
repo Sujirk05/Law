@@ -22,7 +22,7 @@ function Servicepage() {
         >
           <h1
            className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white text-center"
-            style={{ fontFamily: "Cinzel" }}
+           
           >
             Our Services
           </h1>
@@ -65,7 +65,7 @@ function Servicepage() {
                   decisions with confidence.
                 </p>
 
-                <button className="mt-6 bg-yellow-500 text-black px-5 lg:px-6 py-3 lg:py-4 rounded-xl font-semibold text-sm lg:text-base hover:bg-yellow-400 hover:scale-105 transition duration-300 shadow-lg">
+                <button className="mt-6 bg-yellow-500 text-black px-5 lg:px-6 py-3 lg:py-4 rounded-xl font-serif font-semibold text-sm lg:text-base hover:bg-yellow-400 hover:scale-105 transition duration-300 shadow-lg">
                   <a href="/Appointpage">Book Appointment</a>
                 </button>
               </motion.div>

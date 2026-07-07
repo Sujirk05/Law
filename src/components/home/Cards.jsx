@@ -97,7 +97,7 @@ function Cards() {
                 </p>
 
                 <a href="/Appointpage" className="mt-5">
-                  <button className="w-full bg-yellow-500 text-black py-3 lg:py-2.5 rounded-xl font-semibold text-sm lg:text-base
+                  <button className="w-full bg-yellow-500 text-black py-3 lg:py-2.5 rounded-xl font-semibold font-serif text-sm lg:text-base
                    hover:bg-yellow-400 transition duration-300">
                     Book Appointment
                   </button>

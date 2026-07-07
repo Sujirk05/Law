@@ -69,7 +69,7 @@ function Contact() {
             ))}
           </div>
 
-          <form className="bg-white rounded-2xl p-6 lg:p-10 shadow-2xl space-y-5" onSubmit={handleSubmit}>
+          <form className="hidden md:block bg-white rounded-2xl p-6 lg:p-10 shadow-2xl space-y-5" onSubmit={handleSubmit}>
             <input type="text" placeholder="Full Name"
             className="w-full p-3 lg:p-4 rounded-xl border border-gray-300 text-black text-sm lg:text-base focus:outline-none
              focus:border-yellow-500"  />
@@ -85,7 +85,7 @@ function Contact() {
             className="w-full p-3 lg:p-4 rounded-xl border border-gray-300 text-black text-sm lg:text-base
              focus:outline-none focus:border-yellow-500 resize-none"  ></textarea>
 
-            <button className="w-full bg-yellow-500 text-black py-3 lg:py-4 rounded-xl font-semibold text-base lg:text-lg shadow-lg
+            <button className="w-full bg-yellow-500 text-black py-3 lg:py-4 rounded-xl font-semibold font-serif text-base lg:text-lg shadow-lg
              hover:bg-yellow-400 hover:shadow-yellow-500/40 hover:scale-[1.02] transition-all duration-300">
               Book Consultation
             </button>

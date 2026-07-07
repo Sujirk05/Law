@@ -15,7 +15,7 @@ function Aboutpage() {
   transition={{ duration: 0.8 }}
   className="absolute inset-0 flex flex-col items-center justify-center"
 >
-    <h1  className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white text-center px-4"   style={{ fontFamily: "cinzel" }}  >
+    <h1  className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white text-center px-4"     >
       About Incredible Law Chamber
     </h1>
       <p className="mt-3 lg:mt-4 text-sm sm:text-base lg:text-lg tracking-wide max-w-3xl text-center text-gray-200 px-6">
@@ -137,7 +137,7 @@ transition={{ duration: 0.6, delay: 0.6 }}
 >
     <img
       src="/images/adv.jpg"
-      className="w-full h-[280px] lg:h-[400px] object-cover"
+      className=" hidden md:block w-full h-[280px] lg:h-[400px] object-cover"
       alt="Law books"
     />
   </motion.div>

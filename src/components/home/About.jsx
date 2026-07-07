@@ -79,7 +79,7 @@ function About() {
             About Us
           </p>
 
-          <h2 className="text-2xl sm:text-4xl  lg:text-5xl font-bold mt-6 text-white leading-tight">
+          <h2 className="text-2xl sm:text-4xl  lg:text-5xl font-medium  mt-6 text-white leading-tight">
             Dedicated to Justice,
             <br />
             Committed to Excellence
@@ -101,7 +101,7 @@ function About() {
           <div className="mt-8 md:mt-12 flex gap-3 md:gap-5">
             <Link to="/Aboutpage">
               <button
-                className="px-6 py-3 md:px-10 md:py-5 bg-yellow-500 text-black font-semibold rounded-2xl hover:scale-105 transition duration-300 shadow-xl"  >
+                className="px-6 py-3 md:px-10 md:py-5 bg-yellow-500 text-black font-semibold font-serif rounded-2xl hover:scale-105 transition duration-300 shadow-xl"  >
                 Learn More
               </button>
             </Link>

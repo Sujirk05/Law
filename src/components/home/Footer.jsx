@@ -1,5 +1,5 @@
 
-import {Link} from "react-router-dom"
+import {Link,NavLink} from "react-router-dom"
 function Footer() {
   
   const scrollTop = () => {
@@ -13,11 +13,11 @@ function Footer() {
     <footer className="w-full bg-black text-white px-5 lg:px-10 py-10 lg:py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
         <div>
-          <h2 className=" text-xl lg:text-2xl  text-yellow-400" style={{ fontFamily: "poppins" }}>
+          <h2 className=" text-xl lg:text-2xl  text-yellow-400" >
            Incredible Law Chamber
           </h2>
 
-          <p className="text-gray-400 mt-3 lg:mt-4 leading-relaxed  text-sm lg:text-base" style={{fontFamily:"Inter"}}>
+          <p className="text-gray-400 mt-3 lg:mt-4 leading-relaxed  text-sm lg:text-base" >
             Delivering trusted legal solutions with integrity,
             professionalism, and commitment to justice.
           </p>
@@ -25,41 +25,41 @@ function Footer() {
 
       
         <div>
-          <h3 className="text-lg lg:text-xl  text-yellow-400" style={{ fontFamily: "Poppins" }}>
+          <h3 className="text-lg lg:text-xl  text-yellow-400" >
             Quick Links
           </h3>
 
-          <ul className="mt-3 lg:mt-4 space-y-4 lg:space-y-3 text-gray-400 text-sm lg:text-base" style={{fontFamily:"Inter"}}>
+          <ul className="mt-3 lg:mt-4 space-y-4 lg:space-y-3 text-gray-400 text-sm lg:text-base" >
           <li>
-    <Link to="/" onClick={scrollTop} className="hover:text-yellow-400">
+    <NavLink to="/" onClick={scrollTop} className="hover:text-yellow-400">
       Home
-    </Link>
+    </NavLink>
   </li>
               <li>
-    <Link to="/Aboutpage" onClick={scrollTop} className="hover:text-yellow-400">
+    <NavLink to="/Aboutpage" onClick={scrollTop} className="hover:text-yellow-400">
       About
-    </Link>
+    </NavLink>
   </li>
              <li>
-    <Link to="/Servicepage" onClick={scrollTop} className="hover:text-yellow-400">
+    <NavLink to="/Servicepage" onClick={scrollTop} className="hover:text-yellow-400">
       Services
-    </Link>
+    </NavLink>
   </li>
             <li>
-    <Link to="/Contactpage" onClick={scrollTop} className="hover:text-yellow-400">
+    <NavLink to="/Contactpage" onClick={scrollTop} className="hover:text-yellow-400">
       Contact
-    </Link>
+    </NavLink>
   </li>
           </ul>
         </div>
 
        
         <div>
-          <h3 className="text-lg lg:text-xl  text-yellow-400" style={{ fontFamily: "Poppins" }}>
+          <h3 className="text-lg lg:text-xl  text-yellow-400" >
             Contact
           </h3>
 
-          <div className="mt-3 lg:mt-4 space-y-4 lg:space-y-3 text-gray-400 text-sm lg:text-base" style={{fontFamily:"Inter"}}>
+          <div className="mt-3 lg:mt-4 space-y-4 lg:space-y-3 text-gray-400 text-sm lg:text-base" >
             <p>📍 Chennai, Tamil Nadu</p>
             <p>📞 +91 98765 43210</p>
             <p>✉ contact@incredible.com</p>
