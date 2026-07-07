@@ -138,7 +138,7 @@ function Services() {
         {/* View More Button */}
         <div className="md:hidden mt-8 flex justify-center">
           <Link to="/Servicepage">
-            <button className="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-full hover:scale-105 transition duration-300">
+            <button className="px-6 py-3 bg-yellow-500 text-black font-semibold font-serif rounded-full hover:scale-105 transition duration-300">
               View All Services
             </button>
           </Link>
