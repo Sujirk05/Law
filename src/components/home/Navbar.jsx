@@ -37,8 +37,7 @@ function Navbar() {
     }`;
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-all duration-500 bg-black`}>
+    <header className={`sticky top-0 z-50 w-full transition-all duration-500 bg-black`}>
       <div className="max-w-[1500px] mx-auto px-5 lg:px-10">
         <div className="flex items-center justify-between h-20 lg:h-24">
 
@@ -109,7 +108,7 @@ function Navbar() {
             {/* Dark Overlay */}
       <div  onClick={() => setMenuOpen(false)}
         className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-all duration-300 md:hidden ${
-          menuOpen ? "opacity-100 visible" : "opacity-0 invisible"    }`} />
+          menuOpen ? "opacity-100 visible" : "opacity-0 invisible"    }`} /> 
 
       {/* Mobile Drawer */}
       <div className={`fixed top-0 right-0 z-50 h-screen w-[300px] bg-black/95 backdrop-blur-xl border-l border-white/10
@@ -128,46 +127,27 @@ function Navbar() {
 
         {/* Mobile Navigation */}
         <nav  className="mt-12 flex flex-col px-8"   >
-          <NavLink
-            to="/"
-            end
-            onClick={scrollTop}
-            className={({ isActive }) =>
+          <NavLink  to="/"  end onClick={scrollTop} className={({ isActive }) =>
               `py-4 border-b border-white/10 text-lg transition-all duration-300 ${
                 isActive
                   ? "text-yellow-500"
-                  : "text-white hover:text-yellow-400"
-              }`
-            }
-          >
+                  : "text-white hover:text-yellow-400"  }`  } >
             Home
           </NavLink>
 
-          <NavLink
-            to="/Aboutpage"
-            onClick={scrollTop}
-            className={({ isActive }) =>
+          <NavLink  to="/Aboutpage"  onClick={scrollTop} className={({ isActive }) =>
               `py-4 border-b border-white/10 text-lg transition-all duration-300 ${
                 isActive
                   ? "text-yellow-500"
-                  : "text-white hover:text-yellow-400"
-              }`
-            }
-          >
+                  : "text-white hover:text-yellow-400"  }`  }  >
             About
           </NavLink>
 
-          <NavLink
-            to="/Servicepage"
-            onClick={scrollTop}
-            className={({ isActive }) =>
+          <NavLink to="/Servicepage"  onClick={scrollTop}  className={({ isActive }) =>
               `py-4 border-b border-white/10 text-lg transition-all duration-300 ${
                 isActive
                   ? "text-yellow-500"
-                  : "text-white hover:text-yellow-400"
-              }`
-            }
-          >
+                  : "text-white hover:text-yellow-400"  }` } >
             Services
           </NavLink>
 

@@ -3,8 +3,6 @@ function Hero() {
   return (
     <section id="Hero" className="w-full min-h-[330px] md:h-screen overflow-hidden">
       <div className="relative w-full md:h-full">
-
-  
         <img  src="/images/bg.jpg"   alt="Law Hero"   className="absolute inset-0 w-full h-full object-cover" />
     <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/30"></div>
  

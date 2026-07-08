@@ -31,8 +31,7 @@ function Contact() {
   ];
 
   return (
-    <section
-      id="Contact"
+    <section id="Contact"
      className="w-full py-14 lg:py-20 px-4 lg:px-6 bg-gradient-to-r from-slate-950 via-gray-900 to-black text-white scroll-mt-24" >
       <div className="w-[90%] max-w-[1500px] mx-auto">
        

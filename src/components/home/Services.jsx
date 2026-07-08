@@ -53,8 +53,7 @@ function Services() {
   ];
 
   return (
-    <section
-      id="Services"
+    <section  id="Services"
       className="w-full py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-b from-white to-slate-100 scroll-mt-24"
     >
       <div className="max-w-7xl mx-auto">

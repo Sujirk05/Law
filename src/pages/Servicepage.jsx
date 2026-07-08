@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 function Servicepage() {
   return (
-    <section>
+    <>
       {/* Hero Section */}
-      <div className="relative h-[300px] lg:h-[50vh] lg:min-h-[400px] text-white">
+      <header className="relative h-[300px] lg:h-[50vh] lg:min-h-[400px] text-white">
         <img
           src="/images/hero3.jpg"
           alt="Legal Services"
@@ -31,10 +31,10 @@ function Servicepage() {
             Expert legal solutions tailored to your needs
           </p>
         </motion.div>
-      </div>
+      </header>
 
       {/* Content Section */}
-      <div className="bg-slate-50 py-12 pb-1 lg:py-16 px-4 lg:px-6">
+      <section className="bg-slate-50 py-12 pb-1 lg:py-16 px-4 lg:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-14">
             <div>
@@ -87,11 +87,11 @@ function Servicepage() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Cards Section */}
       <Cards />
-    </section>
+    </>
   );
 }
 

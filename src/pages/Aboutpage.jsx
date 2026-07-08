@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { FaCheck } from "react-icons/fa";
 function Aboutpage() {
     return(
-       <section >
+       <>
         {/* about hero section */}
-          <div className="relative h-[280px] lg:h-[400px] text-white">
+          <header className="relative h-[280px] lg:h-[400px] text-white">
 
               <img  src="/images/hero.jpg" className="w-full h-full object-cover"/>
   <div className="absolute inset-0 bg-black/75"></div>
@@ -24,10 +24,10 @@ function Aboutpage() {
       
       </motion.div>
   </div>
-</div>
+</header>
 
 {/* about content section */}
-<div className="bg-gray-100 py-10 lg:py-12">
+<section className="bg-gray-100 py-10 lg:py-12">
   <div className="max-w-6xl mx-auto px-4 lg:px-6">
 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
       
@@ -109,10 +109,10 @@ transition={{ duration: 0.6, delay: 0.6 }}
 
     </div>
   </div>
-</div>
+</section>
 
 {/* about lawyer     */}
-    <div className="bg-gray-200 max-w-full mx-auto py-10 lg:py-12 px-4 lg:px-6 ">
+    <section className="bg-gray-200 max-w-full mx-auto py-10 lg:py-12 px-4 lg:px-6 ">
         <div className="max-w-6xl mx-auto py-6 lg:py-12 px-2 lg:px-6  ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
               
@@ -194,10 +194,10 @@ transition={{ duration: 0.6, delay: 0.6 }}
         </div>
     </div>
        </div>
-</div>
+</section>
 
 {/* Why Choose Us Section */}
-<div className="bg-slate-100 py-12 lg:py-20 px-4 lg:px-6">
+<section className="bg-slate-100 py-12 lg:py-20 px-4 lg:px-6">
   <div className="max-w-6xl mx-auto">
 
     {/* Top Content */}
@@ -278,9 +278,9 @@ transition={{ duration: 0.6, delay: 0.6 }}
 
     </div>
   </div>
-</div>
+</section>
 
-     </section>
+     </>
     )
 }
     export default Aboutpage

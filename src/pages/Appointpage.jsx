@@ -9,7 +9,7 @@ function Appointpage(){
     return(
        <>
            {/* book appointment hero section */}
-           <div className="relative h-[280px] lg:h-[350px] text-white">
+           <header className="relative h-[280px] lg:h-[350px] text-white">
   <img  src="/images/hero5.jpg"  alt="Book Appointment"   className="w-full h-full object-cover" />
 
   <div className="absolute inset-0 bg-black/75"></div>
@@ -28,7 +28,7 @@ function Appointpage(){
       Schedule a confidential consultation with our legal experts
     </p>
 </motion.div>
-</div>
+</header>
 
 {/* book appointment form section */}
 <section className="bg-gray-100 py-12 lg:py-16 px-4 lg:px-6">
