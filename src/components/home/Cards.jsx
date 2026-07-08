@@ -68,45 +68,100 @@ function Cards() {
           practical legal solutions tailored to every client.
         </p>
       </div>
+{/* Cards */}
+<div className="max-w-7xl mx-auto">
 
-      {/* Cards */}
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {cards.map((card, index) => (
-            <div
-              key={index}
+  {/* ---------------- MOBILE ---------------- */}
+  <div className="md:hidden">
+    <div  className="  flex  gap-5  overflow-x-auto  snap-x  snap-mandatory  pb-3 px-1  scrollbar-hide ">
+    {cards.map((card, index) => (
+        <div  key={index} className=" snap-center shrink-0 w-[88%]  bg-white  rounded-3xl  overflow-hidden  shadow-xl  border border-gray-100 " >
+          <img
+            src={card.image}
+            alt={card.title}
+            className="w-full h-56 object-cover"
+          />
+
+          <div className="p-5">
+            <h3 className="text-xl font-bold text-slate-900">
+              {card.title}
+            </h3>
+
+            <p className="mt-3 text-gray-600 text-[15px] leading-7">
+              {card.description}
+            </p>
+
+            <a href="/Appointpage">
+              <button  className="  mt-6  w-full  rounded-2xl   bg-yellow-500  py-3  font-semibold  hover:bg-yellow-400  transition " >
+                Book Appointment
+              </button>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  
+      
+  </div>
+
+  {/* ---------------- DESKTOP ---------------- */}
+  <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+    {cards.map((card, index) => (
+      <div
+        key={index}
+        className="
+          bg-white
+          rounded-2xl
+          overflow-hidden
+          shadow-lg
+          border-t-4
+          border-yellow-500
+          hover:shadow-2xl
+          hover:-translate-y-3
+          transition
+          duration-300
+          flex
+          flex-col
+        "
+      >
+        <img
+          src={card.image}
+          alt={card.title}
+          className="w-full h-52 lg:h-44 object-cover"
+        />
+
+        <div className="p-5 flex flex-col flex-grow">
+          <h3 className="text-xl font-bold text-slate-900 min-h-[48px]">
+            {card.title}
+          </h3>
+
+          <p className="text-gray-600 mt-4 leading-relaxed flex-grow">
+            {card.description}
+          </p>
+
+          <a href="/Appointpage" className="mt-5">
+            <button
               className="
-                bg-white
-                rounded-2xl
-                overflow-hidden
-                shadow-lg
-                border-t-4 border-yellow-500
-                hover:shadow-2xl
-                hover:-translate-y-3
-                transition duration-300
-                flex flex-col "   >
-              <img  src={card.image} alt={card.title}  className="w-full h-52 sm:h-56 lg:h-44 object-cover"  />
-
-              <div className="p-4 lg:p-5 flex flex-col flex-grow">
-                <h3 className="text-lg lg:text-xl font-bold text-slate-900 min-h-[48px]">
-                  {card.title}
-                </h3>
-
-                <p className="text-gray-600 text-sm lg:text-base mt-3 lg:mt-4 leading-relaxed flex-grow">
-                  {card.description}
-                </p>
-
-                <a href="/Appointpage" className="mt-5">
-                  <button className="w-full bg-yellow-500 text-black py-3 lg:py-2.5 rounded-xl font-semibold font-serif text-sm lg:text-base
-                   hover:bg-yellow-400 transition duration-300">
-                    Book Appointment
-                  </button>
-                </a>
-              </div>
-            </div>
-          ))}
+                w-full
+                bg-yellow-500
+                text-black
+                py-3
+                rounded-xl
+                font-semibold
+                hover:bg-yellow-400
+                transition
+              "
+            >
+              Book Appointment
+            </button>
+          </a>
         </div>
       </div>
+    ))}
+  </div>
+
+</div>
     </section>
   );
 }

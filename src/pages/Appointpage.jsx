@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 function Appointpage(){
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent page refresh
+    e.preventDefault();
 
     // Your form logic here
     console.log("Form submitted");
@@ -38,8 +38,7 @@ function Appointpage(){
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          onSubmit={handleSubmit}
-        >
+          onSubmit={handleSubmit}  >
           <div className="text-center mb-10">
             <h1 className="text-3xl lg:text-4xl text-slate-700 font-bold">
               Appointment Details
@@ -48,8 +47,7 @@ function Appointpage(){
               Fill in your details and we will get back to you soon.
             </p>
           </div>
-
-       
+      
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
            
             <div>
@@ -61,8 +59,7 @@ function Appointpage(){
               <label className="block mb-2 font-medium text-sm lg:text-base">Phone Number</label>
               <input  type="tel"  placeholder="Phone Number"  className="w-full p-3 lg:p-3.5 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-yellow-400 text-sm lg:text-base" />
             </div>
-
-         
+       
             <div>
               <label className="block mb-2 font-medium text-sm lg:text-base">Email Address</label>
               <input  type="email"  placeholder="Email Address" className="w-full p-3 lg:p-3.5 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-yellow-400 text-sm lg:text-base"    />
@@ -82,16 +79,14 @@ function Appointpage(){
                 <option>Video call</option>
               </select>
             </div>
-
-            
+           
             <div>
               <label className="block mb-2 font-medium text-sm lg:text-base">Date</label>
               <input
                 type="date" className="w-full p-3 lg:p-3.5 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-yellow-400 text-sm lg:text-base"
               />
             </div>
-
-          
+         
             <div>
               <label className="block mb-2 font-medium text-sm lg:text-base">Time</label>
               <input
@@ -109,8 +104,7 @@ function Appointpage(){
             </label>
             <select
               defaultValue=""
-              className="w-full p-3 lg:p-3.5 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-yellow-400 text-sm lg:text-base"
-            >
+              className="w-full p-3 lg:p-3.5 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-yellow-400 text-sm lg:text-base" >
               <option value="" disabled>
                 Select
               </option>
@@ -126,9 +120,6 @@ function Appointpage(){
           </div>
           </div>
 
-       
-         
-
           <div className="mt-6">
             <label className="block mb-2 font-medium text-sm lg:text-base">
               Case Description
@@ -139,7 +130,6 @@ function Appointpage(){
             ></textarea>
           </div>
 
-  
           <div className="mt-6">
             <label className="block mb-2 font-medium text-sm lg:text-base">
               Have You Consulted Another Lawyer Before?
@@ -165,11 +155,9 @@ function Appointpage(){
             </label>
           </div>
 
-        
           <button
-           className="py-3 lg:py-4 w-full bg-yellow-500 rounded-lg font-semibold font-serif text-sm lg:text-base hover:bg-yellow-600 hover:-translate-y-1 transition duration-300 mt-8 lg:mt-10"
-            
-          >
+           className="py-3 lg:py-4 w-full bg-yellow-500 rounded-lg font-semibold font-serif text-sm lg:text-base hover:bg-yellow-600 
+           hover:-translate-y-1 transition duration-300 mt-8 lg:mt-10"  >
             Book Appointment
           </button>
         </motion.form>

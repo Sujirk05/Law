@@ -209,7 +209,7 @@ transition={{ duration: 0.6, delay: 0.6 }}
           Why Choose Us
         </p>
 
-        <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 leading-tight">
+        <h2 className="text-2xl lg:text-5xl font-bold text-slate-900 leading-tight">
           Trusted Legal Excellence
         </h2>
 
@@ -229,10 +229,8 @@ transition={{ duration: 0.6, delay: 0.6 }}
           "Dedicated Support",
           "Integrity & Confidentiality",
         ].map((item, index) => (
-          <div
-            key={index}
-      className="bg-white rounded-xl shadow-md px-4 lg:px-6 py-4 lg:py-5 flex items-center gap-3 lg:gap-4 hover:translate-x-2 transition duration-300"
-          >
+          <div key={index}
+      className="bg-white rounded-xl shadow-md px-4 lg:px-6 py-4 lg:py-5 flex items-center gap-3 lg:gap-4 hover:translate-x-2 transition duration-300" >
             <div className="w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-yellow-500 flex items-center justify-center shrink-0">
   <FaCheck className="text-black text-xs lg:text-sm" />
 </div>

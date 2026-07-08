@@ -35,3 +35,9 @@ h5,
 h6 {
     font-family: "Cormorant Garamond", serif;
 }
+
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

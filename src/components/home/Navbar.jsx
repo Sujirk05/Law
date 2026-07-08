@@ -38,8 +38,7 @@ function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-500 bg-black`}
-    >
+      className={`sticky top-0 z-50 w-full transition-all duration-500 bg-black`}>
       <div className="max-w-[1500px] mx-auto px-5 lg:px-10">
         <div className="flex items-center justify-between h-20 lg:h-24">
 

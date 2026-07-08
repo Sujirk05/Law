@@ -80,7 +80,7 @@ function Contactpage() {
                     
                 </form>
                   </div>
-                  <div className="flex-1 rounded-2xl overflow-hidden mt-0 lg:mt-16 mb-10 lg:mb-16"> 
+                  <div className="flex-1 rounded-2xl overflow-hidden mt-0 lg:mt-16 mb-10 lg:mb-16 hidden md:block"> 
                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15547.682017621117!2d80.11520271154129!3d13.040731950884956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261ba19a176f1%3A0x1e5ce1e2c0ff67e4!2sKattupakkam%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1782799264330!5m2!1sen!2sin" width="100% "className="w-full h-[350px] lg:h-[550px]" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="strict-origin-when-cross-origin"></iframe> 
                     </div>
              </div></div>

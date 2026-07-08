@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <section  id="About"  className="   relative w-full py-16 md:py-28 px-4  md:px-6 sm:px-6 lg:px-16 overflow-hidden scroll-mt-24   bg-gradient-to-r from-black via-[#0B1628] to-[#111111]    border-y border-yellow-500/10  "   >
+    <section  id="About"  className="   relative w-full py-16 md:py-28 px-4  md:px-6 sm:px-6 lg:px-16 overflow-hidden scroll-mt-24 bg-[#F8F6F1]  border-y border-yellow-500/10  "   >
       
       <div className="absolute top-24 right-24 w-96 h-96 bg-yellow-500/10 blur-[140px] rounded-full" />
       <div className="absolute bottom-10 left-10 w-72 h-72 bg-yellow-500/5 blur-[120px] rounded-full" />
@@ -79,20 +79,20 @@ function About() {
             About Us
           </p>
 
-          <h2 className="text-2xl sm:text-4xl  lg:text-5xl font-medium  mt-6 text-white leading-tight">
+          <h2 className="text-2xl sm:text-4xl  lg:text-5xl font-medium  mt-6 text-slate-900 leading-tight">
             Dedicated to Justice,
             <br />
             Committed to Excellence
           </h2>
 
 
-          <p className="mt-8 text-gray-300 text-lg leading-relaxed">
+          <p className="mt-8 text-gray-700 text-lg leading-relaxed">
             At Incredible Law Chamber, we are committed to delivering
             exceptional legal services with integrity, professionalism,
             and unwavering dedication to justice.
           </p>
 
-          <p className="mt-6 text-gray-400 text-lg leading-relaxed">
+          <p className="mt-6 text-gray-600 text-lg leading-relaxed">
             We provide strategic legal solutions tailored to individuals,
             families, and businesses while protecting rights and ensuring
             strong representation in every case.

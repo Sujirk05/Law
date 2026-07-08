@@ -15,7 +15,7 @@ function Hero() {
              PROFESSIONAL LEGAL COUNSEL
             </p>
           <h1
-              className="mt-5 lg:mt-6  text-3xl sm:text-5xl lg:text-6xl font-semibold leading-tight lg:leading-[1.1] text-white"
+              className="mt-5 lg:mt-6  text-2xl sm:text-5xl lg:text-6xl font-semibold leading-tight lg:leading-[1.1] text-white"
              >
               Justice. Integrity. Results.
             </h1>
