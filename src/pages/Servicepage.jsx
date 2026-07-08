@@ -9,7 +9,7 @@ function Servicepage() {
         <img
           src="/images/hero3.jpg"
           alt="Legal Services"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover "
         />
 
         <div className="absolute inset-0 bg-black/75"></div>
@@ -34,7 +34,7 @@ function Servicepage() {
       </div>
 
       {/* Content Section */}
-      <div className="bg-slate-50 py-12 lg:py-16 px-4 lg:px-6">
+      <div className="bg-slate-50 py-12 pb-1 lg:py-16 px-4 lg:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-14">
             <div>
@@ -81,7 +81,7 @@ function Servicepage() {
                 <img
                   src="/images/bg.png"
                   alt="Legal Services"
-                 className="max-w-[350px] lg:max-w-[500px] w-full h-auto"
+                 className="max-w-[350px] lg:max-w-[500px] w-full h-auto hidden md:block"
                 />
               </motion.div>
             </div>

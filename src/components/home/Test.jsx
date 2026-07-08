@@ -96,7 +96,7 @@ function Test() {
           }}
           className={`relative ${isLeft ? "mr-6" : "ml-6"}`}
         >
-          {/* Avatar */}
+        
           <img
             src={item.image}
             alt={item.name}

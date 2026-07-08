@@ -100,8 +100,8 @@ function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button  onClick={() => setMenuOpen(true)}  className="md:hidden" >
-            <img  src="/images/menu.svg" alt="Menu"   className="w-8 h-8" />
+           <button  onClick={() => setMenuOpen(true)}  className="md:hidden" >
+         <img  src="/images/menu.svg" alt="Menu"   className="w-8 h-8" />
           </button>
 
         </div>
@@ -124,7 +124,7 @@ function Navbar() {
 
         {/* Mobile Logo */}
         <div className="flex justify-center mt-6">
-          <img  src="/images/logo1.svg"  alt="Logo"  className="h-20 w-auto"  />
+         <NavLink to="/" onClick={scrollTop} ><img  src="/images/logo1.svg"  alt="Logo"  className="h-20 w-auto"  /></NavLink>
         </div>
 
         {/* Mobile Navigation */}

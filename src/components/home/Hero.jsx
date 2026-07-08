@@ -36,7 +36,7 @@ function Hero() {
     <div className="mt-8">
   <Link
     to="/Appointpage"
-    className="inline-flex items-center justify-center bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold font-serif text-base hover:bg-yellow-400 hover:scale-105 transition duration-300 shadow-lg"
+    className="inline-flex items-center justify-center bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold font-serif text-base hover:bg-yellow-400 hover:scale-105 transition duration-300 shadow-lg mb-4"
   >
     Schedule a Consultation
   </Link>
