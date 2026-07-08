@@ -13,9 +13,7 @@ function Footer() {
     <footer className="w-full bg-black text-white px-5 lg:px-10 py-10 lg:py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
         <div>
-          <h2 className=" text-xl lg:text-2xl  text-yellow-400" >
-           Incredible Law Chamber
-          </h2>
+          <h2 className=" text-xl lg:text-2xl  text-yellow-400" > Incredible Law Chamber</h2>
 
           <p className="text-gray-400 mt-3 lg:mt-4 leading-relaxed  text-sm lg:text-base" >
             Delivering trusted legal solutions with integrity,
@@ -25,9 +23,7 @@ function Footer() {
 
       
         <div>
-          <h3 className="text-lg lg:text-xl  text-yellow-400" >
-            Quick Links
-          </h3>
+          <h3 className="text-lg lg:text-xl  text-yellow-400" >  Quick Links </h3>
 
           <ul className="mt-3 lg:mt-4 space-y-4 lg:space-y-3 text-gray-400 text-sm lg:text-base" >
           <li>
@@ -55,9 +51,7 @@ function Footer() {
 
        
         <div>
-          <h3 className="text-lg lg:text-xl  text-yellow-400" >
-            Contact
-          </h3>
+          <h3 className="text-lg lg:text-xl  text-yellow-400" >  Contact </h3>
 
           <div className="mt-3 lg:mt-4 space-y-4 lg:space-y-3 text-gray-400 text-sm lg:text-base" >
             <p>📍 Chennai, Tamil Nadu</p>

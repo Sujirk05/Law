@@ -92,7 +92,7 @@ function Cards() {
             </p>
 
             <a href="/Appointpage">
-              <button  className="  mt-6  w-full  rounded-2xl   bg-yellow-500  py-3  font-semibold  hover:bg-yellow-400  transition " >
+              <button  className="  mt-6  w-full  rounded-2xl   bg-yellow-500  py-3  font-semibold font-serif hover:bg-yellow-400  transition " >
                 Book Appointment
               </button>
             </a>
@@ -149,6 +149,7 @@ function Cards() {
                 py-3
                 rounded-xl
                 font-semibold
+                font-serif
                 hover:bg-yellow-400
                 transition
               "

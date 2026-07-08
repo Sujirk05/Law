@@ -35,13 +35,9 @@ function Contact() {
      className="w-full py-14 lg:py-20 px-4 lg:px-6 bg-gradient-to-r from-slate-950 via-gray-900 to-black text-white scroll-mt-24" >
       <div className="w-[90%] max-w-[1500px] mx-auto">
        
-        <p className="text-yellow-500 font-semibold text-lg lg:text-2xl tracking-widest text-center">
-          CONTACT US
-        </p>
+        <p className="text-yellow-500 font-semibold text-lg lg:text-2xl tracking-widest text-center">CONTACT US</p>
 
-        <h2 className="text-3xl lg:text-5xl font-bold text-center mt-4">
-          Get Expert Legal Assistance
-        </h2>
+        <h2 className="text-3xl lg:text-5xl font-bold text-center mt-4">  Get Expert Legal Assistance </h2>
 
         <p className="text-gray-300 text-center mt-4 max-w-3xl mx-auto text-sm lg:text-lg leading-relaxed px-2">
           Have legal questions or need professional representation?
@@ -58,9 +54,7 @@ function Contact() {
                 <div className="flex items-center gap-4 mb-3">
                   <div className="text-yellow-400 scale-90 lg:scale-100">{item.icon}</div>
 
-                  <h3 className="text-lg lg:text-2xl font-semibold text-yellow-400">
-                    {item.title}
-                  </h3>
+                  <h3 className="text-lg lg:text-2xl font-semibold text-yellow-400">  {item.title} </h3>
                 </div>
 
                 <p className="text-gray-300 ml-8 lg:ml-10 text-sm lg:text-base">{item.value}</p>

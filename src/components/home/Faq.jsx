@@ -51,9 +51,7 @@ const handleToggle = (index) => {
   <section id="faq" className="bg-gradient-to-b from-[#f8fafc] to-[#eef2f7] py-14 lg:py-20 px-4 lg:px-6">
      
       <div className="text-center">
-     <h1 className="text-2xl lg:text-5xl font-medium text-slate-900">
-          Frequently Asked Questions
-        </h1>
+     <h1 className="text-2xl lg:text-5xl font-medium text-slate-900">  Frequently Asked Questions  </h1>
 
        <p className="text-slate-600 mt-4 max-w-3xl mx-auto text-sm lg:text-lg leading-relaxed px-2">
           Find answers to common legal questions and learn how we can assist
@@ -71,9 +69,7 @@ const handleToggle = (index) => {
            
               <div  onClick={() => handleToggle(index)}
            className="cursor-pointer px-4 py-4 lg:px-8 lg:py-6 flex justify-between items-center gap-3" >
-               <p className="text-base lg:text-xl text-slate-900 font-serif">
-                  {item.question}
-                </p>
+               <p className="text-base lg:text-xl text-slate-900 font-serif">  {item.question}  </p>
 
                 <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-yellow-500 flex items-center justify-center shadow-md shrink-0">
                   {isOpen ? (
@@ -98,9 +94,7 @@ const handleToggle = (index) => {
                   <div className="px-4 pb-4 lg:px-8 lg:pb-6">
                       <div className="h-[1px] bg-yellow-500/20 mb-5"></div>
 
-                      <p className="text-slate-600 leading-relaxed text-sm lg:text-lg">
-                        {item.answer}
-                      </p>
+                      <p className="text-slate-600 leading-relaxed text-sm lg:text-lg">   {item.answer}  </p>
                     </div>
                   </motion.div>
                 )}

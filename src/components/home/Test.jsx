@@ -68,14 +68,10 @@ function Test() {
   <section  id="Test" className="bg-gradient-to-r from-slate-950 via-gray-900 to-black py-20 px-4 lg:px-6 overflow-hidden">
     {/* Heading */}
     <div className="text-center mb-14">
-      <h1 className="text-white text-3xl lg:text-5xl font-medium p-4">
-        What Our Clients Say
-      </h1>
+      <h1 className="text-white text-3xl lg:text-5xl font-medium p-4"> What Our Clients Say</h1>
 
       <h2 className="text-gray-300 mt-2 text-sm lg:text-xl px-2">
-        Our commitment to justice is reflected in the experiences of those we
-        represent.
-      </h2>
+        Our commitment to justice is reflected in the experiences of those we represent.</h2>
     </div>
 
     {/* ================= MOBILE VIEW ================= */}
@@ -94,42 +90,26 @@ function Test() {
             duration: 0.5,
             delay: index * 0.15,
           }}
-          className={`relative ${isLeft ? "mr-6" : "ml-6"}`}
-        >
+          className={`relative ${isLeft ? "mr-6" : "ml-6"}`} >
         
-          <img
-            src={item.image}
-            alt={item.name}
+          <img  src={item.image}  alt={item.name}
             className={`absolute top-6 z-20 w-14 h-14 rounded-full object-cover border-4 border-slate-900 ${
-              isLeft ? "-left-6" : "-right-6"
-            }`}
-          />
+              isLeft ? "-left-6" : "-right-6" }`} />
 
           {/* Card */}
-          <div
-            className={`bg-white rounded-[28px] shadow-xl py-5 ${
-              isLeft ? "pl-16 pr-5" : "pl-5 pr-16"
-            }`}
-          >
+          <div className={`bg-white rounded-[28px] shadow-xl py-5 ${
+              isLeft ? "pl-16 pr-5" : "pl-5 pr-16"  }`} >
             {/* Name */}
-            <h3 className="text-sm font-bold text-gray-900">
-              {item.name}
-            </h3>
+            <h3 className="text-sm font-bold text-gray-900"> {item.name}</h3>
 
             {/* Service */}
-            <p className="text-[11px] text-gray-400 mt-1">
-              {item.service}
-            </p>
+            <p className="text-[11px] text-gray-400 mt-1">  {item.service} </p>
 
             {/* Stars */}
-            <div className="text-yellow-500 text-sm mt-2">
-              {"★".repeat(item.star)}
-            </div>
+            <div className="text-yellow-500 text-sm mt-2">  {"★".repeat(item.star)} </div>
 
             {/* Review */}
-            <p className="text-xs text-gray-600 leading-5 mt-3">
-              {item.description}
-            </p>
+            <p className="text-xs text-gray-600 leading-5 mt-3">  {item.description}  </p>
           </div>
         </motion.div>
       );
@@ -141,8 +121,7 @@ function Test() {
     <div className="hidden lg:flex justify-center">
       <div className="relative w-full lg:w-[1250px] pb-24 lg:pb-20">
         {/* Previous Button */}
-        <button
-          onClick={prevSlide}
+        <button onClick={prevSlide}
           className="absolute right-24 bottom-0 z-40 w-16 h-16 rounded-full bg-gray-800 text-white border border-yellow-500/30 shadow-lg 
           flex justify-center items-center text-4xl hover:scale-110 transition duration-300" >
           <img src="./images/arrowleft.png"/>
@@ -172,21 +151,13 @@ function Test() {
                <img src="./images/quotes.png" alt="Quote" className="w-10 h-10"/>
             </div>
 
-            <h3 className="text-4xl font-bold text-white">
-              {active.name}
-            </h3>
+            <h3 className="text-4xl font-bold text-white">  {active.name} </h3>
 
-            <p className="text-gray-300 mt-2 text-lg">
-              {active.service}
-            </p>
+            <p className="text-gray-300 mt-2 text-lg">   {active.service} </p>
 
-            <p className="text-yellow-400 text-2xl mt-4 mb-6">
-              {"★".repeat(active.star)}
-            </p>
+            <p className="text-yellow-400 text-2xl mt-4 mb-6">   {"★".repeat(active.star)} </p>
 
-            <p className="text-lg text-gray-200 leading-relaxed">
-              {active.description}
-            </p>
+            <p className="text-lg text-gray-200 leading-relaxed">   {active.description}  </p>
           </div>
         </motion.div>
 
