@@ -89,7 +89,7 @@ function Test() {
     "
   >
     {test.map((item, index) => (
-      <div
+      <div key={index}
         className="
           snap-center
           shrink-0
@@ -125,7 +125,7 @@ function Test() {
               {item.name}
             </h3>
 
-            <p className="text-xs text-gray-400">
+            <p className="text-xs text-black">
               {item.service}
             </p>
           </div>
