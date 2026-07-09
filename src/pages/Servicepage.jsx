@@ -7,8 +7,9 @@ function Servicepage() {
       {/* Hero Section */}
       <header className="relative h-[300px] lg:h-[50vh] lg:min-h-[400px] text-white">
         <img
-          src="/images/hero3.jpg"
+          src="/images/hero3.webp"
           alt="Legal Services"
+         
           className="w-full h-full object-cover "
         />
 
@@ -81,6 +82,7 @@ function Servicepage() {
                 <img
                   src="/images/bg.png"
                   alt="Legal Services"
+                    loading="lazy"
                  className="max-w-[350px] lg:max-w-[500px] w-full h-auto hidden md:block"
                 />
               </motion.div>

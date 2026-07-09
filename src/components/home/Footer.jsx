@@ -61,7 +61,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray-800 mt-8 lg:mt-10 pt-5 lg:pt-6 text-center text-gray-500 text-sm lg:text-base">
+      <div className="border-t border-gray-800 mt-8 lg:mt-10 pt-5 lg:pt-6 text-center text-white text-sm lg:text-base">
          <p>&copy; {new Date().getFullYear()} Law Firm. All Rights Reserved.</p>
       </div>
     </footer>

@@ -7,7 +7,7 @@ function Test() {
       name: "Priya S",
       service: "Family Law Client",
       star: 5,
-      image: "./images/img1.jpg",
+      image: "./images/img1.webp",
       description:
         "The legal guidance and support I received were exceptional. Every step of the process was handled with professionalism, clarity, and dedication. I felt confident knowing my case was in trusted hands.",
     },
@@ -15,7 +15,7 @@ function Test() {
       name: "Rajesh K",
       service: "Civil Litigation Client",
       star: 4,
-      image: "./images/img2.jpg",
+      image: "./images/img2.webp",
       description:
         "The professionalism and dedication shown throughout my case were truly remarkable. Every concern was addressed with clarity, and I always felt supported during the legal process.",
     },
@@ -23,7 +23,7 @@ function Test() {
       name: "Meena R",
       service: "Property Dispute Client",
       star: 5,
-      image: "./images/img3.jpg",
+      image: "./images/img3.webp",
       description:
         "I highly appreciate the commitment and legal expertise provided. Their strategic guidance helped me navigate a complex situation with confidence and peace of mind.",
     },
@@ -31,7 +31,7 @@ function Test() {
       name: "Arun V",
       service: "Corporate Legal Client",
       star: 5,
-      image: "./images/img4.jpg",
+      image: "./images/img4.webp",
       description:
         "From the initial consultation to the final resolution, the entire experience was smooth and reassuring. Their expertise helped me navigate a complex legal matter with ease.",
     },
@@ -39,7 +39,7 @@ function Test() {
       name: "Kavitha M",
       service: "Legal Advisory Client",
       star: 4,
-      image: "./images/img5.jpg",
+      image: "./images/img5.webp",
       description:
         "The support and dedication shown were truly outstanding. Every question was answered patiently, and I always felt that my best interests were being protected.",
     },
@@ -47,7 +47,7 @@ function Test() {
       name: "Suresh P",
       service: "Criminal Defense Client",
       star: 5,
-      image: "./images/img6.jpg",
+      image: "./images/img6.webp",
       description:
         "Their professionalism, responsiveness, and legal expertise exceeded my expectations. I felt supported at every stage, and the outcome of my case reflected their strong dedication.",
     },
@@ -74,49 +74,70 @@ function Test() {
         Our commitment to justice is reflected in the experiences of those we represent.</h2>
     </div>
 
-    {/* ================= MOBILE VIEW ================= */}
+   {/* ================= MOBILE VIEW ================= */}
 <div className="block lg:hidden">
-  <div className="max-w-sm mx-auto px-4 space-y-8">
-    {test.slice(0, 4).map((item, index) => {
-      const isLeft = index % 2 === 0;
+  <div
+    className="
+      flex
+      overflow-x-auto
+      snap-x
+      snap-mandatory
+      gap-4
+      px-4
+      pb-4
+      scrollbar-hide
+    "
+  >
+    {test.map((item, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        className="
+          snap-center
+          shrink-0
+          w-[82%]
+          bg-white
+          rounded-3xl
+          p-5
+          shadow-xl
+          border border-white/10
+        "
+      >
+        {/* Stars */}
+        <div className="text-yellow-400 text-lg mb-3">
+          {"★".repeat(item.star)}
+        </div>
 
-      return (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.5,
-            delay: index * 0.15,
-          }}
-          className={`relative ${isLeft ? "mr-6" : "ml-6"}`} >
-        
-          <img  src={item.image}  alt={item.name}
-            className={`absolute top-6 z-20 w-14 h-14 rounded-full object-cover border-4 border-slate-900 ${
-              isLeft ? "-left-6" : "-right-6" }`} />
+        {/* Review */}
+        <p className="text-gray-700 text-sm leading-6 mb-6">
+          {item.description}
+        </p>
 
-          {/* Card */}
-          <div className={`bg-white rounded-[28px] shadow-xl py-5 ${
-              isLeft ? "pl-16 pr-5" : "pl-5 pr-16"  }`} >
-            {/* Name */}
-            <h3 className="text-sm font-bold text-gray-900"> {item.name}</h3>
+        {/* User */}
+        <div className="flex items-center gap-3">
+          <img
+            src={item.image}
+            alt={item.name}
+              loading="lazy"
+            className="w-12 h-12 rounded-full object-cover"
+          />
 
-            {/* Service */}
-            <p className="text-[11px] text-gray-400 mt-1">  {item.service} </p>
+          <div>
+            <h3 className="text-black font-semibold">
+              {item.name}
+            </h3>
 
-            {/* Stars */}
-            <div className="text-yellow-500 text-sm mt-2">  {"★".repeat(item.star)} </div>
-
-            {/* Review */}
-            <p className="text-xs text-gray-600 leading-5 mt-3">  {item.description}  </p>
+            <p className="text-xs text-gray-400">
+              {item.service}
+            </p>
           </div>
-        </motion.div>
-      );
-    })}
+        </div>
+      </motion.div>
+    ))}
   </div>
 </div>
-
     {/* ================= DESKTOP VIEW ================= */}
     <div className="hidden lg:flex justify-center">
       <div className="relative w-full lg:w-[1250px] pb-24 lg:pb-20">

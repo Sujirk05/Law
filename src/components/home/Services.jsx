@@ -3,49 +3,49 @@ import { Link } from "react-router-dom";
 function Services() {
   const services = [
     {
-      image: "/images/civil.jpg",
+      image: "/images/civil.webp",
       title: "Civil Law",
       description:
         "Contract disputes, compensation, property conflicts, and civil rights.",
     },
     {
-      image: "/images/criminal.jpg",
+      image: "/images/criminal.webp",
       title: "Criminal Law",
       description:
         "Strong legal defense and representation in criminal matters.",
     },
     {
-      image: "/images/family.jpg",
+      image: "/images/family.webp",
       title: "Family Law",
       description:
         "Support for guardianship, domestic issues, and family disputes.",
     },
     {
-      image: "/images/divorce.jpg",
+      image: "/images/divorce.webp",
       title: "Divorce Cases",
       description:
         "Legal guidance for divorce, custody, and alimony matters.",
     },
     {
-      image: "/images/property.jpg",
+      image: "/images/property.webp",
       title: "Property Disputes",
       description:
         "Land ownership conflicts, inheritance, and property claims.",
     },
     {
-      image: "/images/corporate.jpg",
+      image: "/images/corporate.webp",
       title: "Corporate Law",
       description:
         "Business compliance, advisory, and corporate dispute resolution.",
     },
     {
-      image: "/images/legal.jpg",
+      image: "/images/legal.webp",
       title: "Legal Consultation",
       description:
         "Expert consultation to understand your legal rights.",
     },
     {
-      image: "/images/doc.jpg",
+      image: "/images/doc.webp",
       title: "Documentation & Agreements",
       description:
         "Drafting and reviewing contracts and legal documents.",
@@ -72,9 +72,10 @@ function Services() {
             <div key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className="group relative h-[440px] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-4 transition-all duration-500" >
-              <img src={service.image} alt={service.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition duration-700"/>
+            className="group relative h-[360px] sm:h-[400px] md:h-[440px] rounded-3xl overflow-hidden shadow-lg cursor-pointer 
+            transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl " >
+              <img src={service.image} alt={service.title}   loading="lazy"
+               className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"/>
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10"></div>
 
@@ -99,7 +100,7 @@ function Services() {
             <Link  key={index} to="/Servicepage"
               data-aos="fade-up"  data-aos-delay={index * 80}   className="group" >
               <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 h-48">
-                <img src={service.image} alt={service.title}
+                <img src={service.image} alt={service.title}   loading="lazy"
                   className="w-full h-32 object-cover group-hover:scale-105 transition duration-500" />
 
                 <div className="px-3 py-3">

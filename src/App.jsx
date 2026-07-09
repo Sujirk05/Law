@@ -27,6 +27,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <ScrollToTop />
+      <main>
       <Routes>
       < Route path="/" element={<Home />} />
         <Route path="/Aboutpage" element={<Aboutpage />} />
@@ -34,7 +35,7 @@ function App() {
         <Route path="/Contactpage" element={<Contactpage />} />
         <Route path="/Appointpage" element={<Appointpage/>}/>
       </Routes> 
-
+</main>
       <Footer />
     </BrowserRouter>
   );

@@ -11,7 +11,8 @@ function Contactpage() {
         <>
             {/* Contact Page Hero Section */}
                 <header className="relative h-[280px] lg:h-[400px] text-white">
-              <img src="/images/hero4.jpg" alt="Contact Us" className="w-full h-full object-cover" />
+              <img src="/images/hero4.webp" alt="Contact Us"  
+   className="w-full h-full object-cover" />
                <div className="absolute inset-0 bg-black/75"></div>
 <motion.div
   className="absolute inset-0 flex flex-col items-center justify-center px-4 lg:-translate-y-4"

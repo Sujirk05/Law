@@ -1,55 +1,86 @@
+import { useState, useRef, useEffect } from "react";
 function Cards() {
   const cards = [
     {
-      image: "/images/civil.jpg",
+      image: "/images/civil.webp",
       title: "Civil Law",
       description:
         "Handling disputes related to contracts, property, compensation, and civil rights.",
     },
     {
-      image: "/images/criminal.jpg",
+      image: "/images/criminal.webp",
       title: "Criminal Law",
       description:
         "Providing strong defense and legal assistance in criminal matters.",
     },
     {
-      image: "/images/family.jpg",
+      image: "/images/family.webp",
       title: "Family Law",
       description:
         "Legal support for guardianship, domestic matters, and family disputes.",
     },
     {
-      image: "/images/divorce.jpg",
+      image: "/images/divorce.webp",
       title: "Divorce Cases",
       description:
         "Professional assistance for divorce, custody, and alimony cases.",
     },
     {
-      image: "/images/property.jpg",
+      image: "/images/property.webp",
       title: "Property Disputes",
       description:
         "Resolving land disputes, ownership conflicts, and inheritance matters.",
     },
     {
-      image: "/images/corporate.jpg",
+      image: "/images/corporate.webp",
       title: "Corporate Law",
       description:
         "Legal advisory for businesses, compliance, and corporate disputes.",
     },
     {
-      image: "/images/legal.jpg",
+      image: "/images/legal.webp",
       title: "Legal Consultation",
       description:
         "Expert consultation to understand legal rights and available actions.",
     },
     {
-      image: "/images/doc.jpg",
+      image: "/images/doc.webp",
       title: "Documentation & Agreements",
       description:
         "Drafting and reviewing contracts, agreements, and legal documents.",
     },
   ];
+const scrollRef = useRef(null);
+const intervalRef = useRef(null);
+const [currentIndex, setCurrentIndex] = useState(0);
 
+const startAutoScroll = () => {
+  intervalRef.current = setInterval(() => {
+    if (!scrollRef.current) return;
+
+    const nextIndex = (currentIndex + 1) % cards.length;
+
+    const cardWidth =
+      scrollRef.current.firstChild.offsetWidth + 20;
+
+    scrollRef.current.scrollTo({
+      left: nextIndex * cardWidth,
+      behavior: "smooth",
+    });
+
+    setCurrentIndex(nextIndex);
+  }, 2000);
+};
+
+const stopAutoScroll = () => {
+  clearInterval(intervalRef.current);
+};
+
+useEffect(() => {
+  startAutoScroll();
+
+  return () => clearInterval(intervalRef.current);
+}, [currentIndex]);
   return (
     <section className="py-12 lg:py-20 px-4 lg:px-6 bg-white">
       {/* Heading */}
@@ -73,7 +104,21 @@ function Cards() {
 
   {/* ---------------- MOBILE ---------------- */}
   <div className="md:hidden">
-    <div  className="  flex  gap-5  overflow-x-auto  snap-x  snap-mandatory  pb-3 px-1  scrollbar-hide ">
+    <div
+  ref={scrollRef}
+  onTouchStart={stopAutoScroll}
+  onTouchEnd={startAutoScroll}
+  className="
+    flex
+    gap-5
+    overflow-x-auto
+    snap-x
+    snap-mandatory
+    pb-3
+    px-1
+    scrollbar-hide
+  "
+>
     {cards.map((card, index) => (
         <div  key={index} className=" snap-center shrink-0 w-[88%]  bg-white  rounded-3xl  overflow-hidden  shadow-xl  border border-gray-100 " >
           <img
@@ -128,6 +173,7 @@ function Cards() {
         <img
           src={card.image}
           alt={card.title}
+            loading="lazy"
           className="w-full h-52 lg:h-44 object-cover"
         />
 

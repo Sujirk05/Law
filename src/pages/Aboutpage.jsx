@@ -6,7 +6,8 @@ function Aboutpage() {
         {/* about hero section */}
           <header className="relative h-[280px] lg:h-[400px] text-white">
 
-              <img  src="/images/hero.jpg" className="w-full h-full object-cover"/>
+              <img  src="/images/hero.webp" alt="hero banner"  
+  className="w-full h-full object-cover"/>
   <div className="absolute inset-0 bg-black/75"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <motion.div
@@ -136,7 +137,7 @@ transition={{ duration: 0.6, delay: 0.6 }}
   viewport={{ once: true }}
 >
     <img
-      src="/images/adv.jpg"
+      src="/images/adv.webp"   loading="lazy"
       className=" hidden md:block w-full h-[280px] lg:h-[400px] object-cover"
       alt="Law books"
     />

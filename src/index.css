@@ -5,6 +5,12 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  font-family: "Inter", sans-serif;
+
+  color: #222;
+  background: #fff;
+}
 @keyframes slideRight {
   from {
     transform: translateX(-100vw); 
@@ -20,13 +26,6 @@ html {
 .animate-slideRight {
   animation: slideRight 2s ease-out forwards;
 }
-body {
-  font-family: "Inter", sans-serif;
-
-  color: #222;
-  background: #fff;
-}
-
 h1,
 h2,
 h3,

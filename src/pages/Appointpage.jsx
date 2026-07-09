@@ -10,7 +10,8 @@ function Appointpage(){
        <>
            {/* book appointment hero section */}
            <header className="relative h-[280px] lg:h-[350px] text-white">
-  <img  src="/images/hero5.jpg"  alt="Book Appointment"   className="w-full h-full object-cover" />
+  <img  src="/images/hero5.webp"  alt="Book Appointment"   
+   className="w-full h-full object-cover" />
 
   <div className="absolute inset-0 bg-black/75"></div>
 

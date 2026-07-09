@@ -22,7 +22,7 @@ function About() {
               ring-1 ring-yellow-500/10
               shadow-[0_0_40px_rgba(234,179,8,0.12)]  "  >
 
-            <img   src="/images/bg2.jpg"   alt="Law Office"  className="  w-full h-[320px] sm:h-[400px] lg:h-[500px] object-cover  brightness-105 contrast-110    hover:scale-[1.02]   transition duration-700   " />
+            <img   src="/images/bg2.webp"   alt="Law Office" loading="lazy"  className="  w-full h-[320px] sm:h-[400px] lg:h-[500px] object-cover  brightness-105 contrast-110    hover:scale-[1.02]   transition duration-700   " />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div> 
@@ -100,7 +100,7 @@ function About() {
           <div className="mt-8 md:mt-12 flex gap-3 md:gap-5">
             <Link to="/Aboutpage">
               <button className="px-6 py-3 md:px-10 md:py-5 bg-yellow-500 text-black font-semibold font-serif rounded-2xl
-               hover:scale-105 transition duration-300 shadow-xl"  >Learn More </button>
+               hover:scale-105 transition duration-300 shadow-xl"  > About Our Firm </button>
             </Link>
 
            <Link to="/Contactpage">
