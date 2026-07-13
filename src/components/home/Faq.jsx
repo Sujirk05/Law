@@ -31,7 +31,7 @@ function Faq() {
     },
   ];
 
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
 const handleToggle = (index) => {
   if (openIndex === index) {
     setOpenIndex(null);
@@ -86,14 +86,9 @@ const handleToggle = (index) => {
                    initial={{ height: 0 }}
                    animate={{ height: "auto" }}
                    exit={{ height: 0 }}
-                    transition={{
-                     duration: 0.5,
-                     ease: "easeInOut",
-                     }}
-                    className="overflow-hidden">
+                    transition={{duration: 0.5, ease: "easeInOut",}} className="overflow-hidden">
                   <div className="px-4 pb-4 lg:px-8 lg:pb-6">
                       <div className="h-[1px] bg-yellow-500/20 mb-5"></div>
-
                       <p className="text-slate-600 leading-relaxed text-sm lg:text-lg">   {item.answer}  </p>
                     </div>
                   </motion.div>

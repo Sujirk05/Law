@@ -65,42 +65,24 @@ function Test() {
   }
 
  return (
-  <section  id="Test" className="bg-gradient-to-r from-slate-950 via-gray-900 to-black py-20 px-4 lg:px-6 overflow-hidden">
-    {/* Heading */}
-    <div className="text-center mb-14">
-      <h1 className="text-white text-3xl lg:text-5xl font-medium p-4"> What Our Clients Say</h1>
+<section id="Test"  className="bg-gradient-to-r from-slate-950 via-gray-900 to-black  py-12 md:py-20 px-4 md:px-6 overflow-hidden">
+  {/* Heading */}
+  <div className="text-center mb-8 md:mb-14">
+    <h1 className="text-white text-2xl md:text-3xl lg:text-5xl font-medium 
+    px-2 md:p-4">
+      What Our Clients Say
+    </h1>
 
-      <h2 className="text-gray-300 mt-2 text-sm lg:text-xl px-2">
-        Our commitment to justice is reflected in the experiences of those we represent.</h2>
-    </div>
+    <h2 className="text-gray-300 mt-3 text-sm md:text-base lg:text-xl px-2">
+      Our commitment to justice is reflected in the experiences of those we represent.
+    </h2>
+  </div>
 
    {/* ================= MOBILE VIEW ================= */}
 <div className="block lg:hidden">
-  <div
-    className="
-      flex
-      overflow-x-auto
-      snap-x
-      snap-mandatory
-      gap-4
-      px-4
-      pb-4
-      scrollbar-hide
-    "
-  >
+  <div className="  flex  overflow-x-auto snap-x snap-mandatory  gap-4  px-4  pb-4 scrollbar-hide  " >
     {test.map((item, index) => (
-      <div key={index}
-        className="
-          snap-center
-          shrink-0
-          w-[82%]
-          bg-white
-          rounded-3xl
-          p-5
-          shadow-xl
-          border border-white/10
-        "
-      >
+      <div key={index} className=" snap-center shrink-0 w-[82%] bg-white rounded-3xl  p-5  shadow-xl border border-white/10 " >
         {/* Stars */}
         <div className="text-yellow-400 text-lg mb-3">
           {"★".repeat(item.star)}
@@ -113,12 +95,7 @@ function Test() {
 
         {/* User */}
         <div className="flex items-center gap-3">
-          <img
-            src={item.image}
-            alt={item.name}
-              loading="lazy"
-            className="w-12 h-12 rounded-full object-cover"
-          />
+          <img src={item.image} alt={item.name} loading="lazy" className="w-12 h-12 rounded-full object-cover" />
 
           <div>
             <h3 className="text-black font-semibold">

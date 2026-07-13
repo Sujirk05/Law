@@ -4,35 +4,34 @@ import { motion } from "framer-motion";
 function Servicepage() {
   return (
     <>
-      {/* Hero Section */}
-      <header className="relative h-[300px] lg:h-[50vh] lg:min-h-[400px] text-white">
-        <img
-          src="/images/hero3.webp"
-          alt="Legal Services"
-         
-          className="w-full h-full object-cover "
-        />
+{/* Hero Section */}
+<header className="relative h-[200px] sm:h-[240px] lg:h-[400px] text-white">
 
-        <div className="absolute inset-0 bg-black/75"></div>
+  <img src="/images/hero3.webp" alt="Legal Services" className="w-full h-full object-cover"/>
 
-        <motion.div
-          className="absolute inset-0 flex flex-col items-center justify-center px-4 lg:-translate-y-4 "
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1
-           className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white text-center"
-           
-          >
-            Our Services
-          </h1>
+  <div className="absolute inset-0 bg-black/75"></div>
 
-          <p className="mt-3 lg:mt-4 text-sm sm:text-base lg:text-lg tracking-wide max-w-3xl text-center text-gray-200 px-4">
-            Expert legal solutions tailored to your needs
-          </p>
-        </motion.div>
-      </header>
+  <motion.div
+    className="
+    absolute inset-0
+    flex flex-col
+    items-center
+    justify-center
+    px-4
+    lg:-translate-y-4"
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }} >
+
+    <h1 className=" text-2xl sm:text-4xl lg:text-6xl font-bold text-white text-center">
+      Our Services
+    </h1>
+
+    <p className=" mt-2 lg:mt text-xs sm:text-base lg:text-lg tracking-wide max-w-3xl text-center text-gray-200 px-4">
+      Expert legal solutions tailored to your needs </p>
+
+  </motion.div>
+</header>
 
       {/* Content Section */}
       <section className="bg-slate-50 py-12 pb-1 lg:py-16 px-4 lg:px-6">
@@ -43,8 +42,7 @@ function Servicepage() {
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
+                viewport={{ once: true }} >
                 <h1 className=" text-3xl lg:text-4xl font-bold mb-3 lg:mb-4 text-slate-900">
                   Trusted Legal Guidance for Every Challenge
                 </h1>
@@ -77,14 +75,9 @@ function Servicepage() {
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <img
-                  src="/images/bg.png"
-                  alt="Legal Services"
-                    loading="lazy"
-                 className="max-w-[350px] lg:max-w-[500px] w-full h-auto hidden md:block"
-                />
+                viewport={{ once: true }} >
+                <img src="/images/bg.png" alt="Legal Services"  loading="lazy"
+                 className="max-w-[350px] lg:max-w-[500px] w-full h-auto hidden md:block" />
               </motion.div>
             </div>
           </div>

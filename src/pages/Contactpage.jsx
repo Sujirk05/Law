@@ -1,56 +1,105 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
+
 function Contactpage() {
     const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent page refresh
-
-    // Your form logic here
+    e.preventDefault(); 
     console.log("Form submitted");
   };
     return(
         <>
             {/* Contact Page Hero Section */}
-                <header className="relative h-[280px] lg:h-[400px] text-white">
-              <img src="/images/hero4.webp" alt="Contact Us"  
-   className="w-full h-full object-cover" />
-               <div className="absolute inset-0 bg-black/75"></div>
-<motion.div
-  className="absolute inset-0 flex flex-col items-center justify-center px-4 lg:-translate-y-4"
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
->
-            
-    <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white text-center"  >Contact Us</h1>
-                <p className="mt-3 lg:mt-4 text-sm sm:text-base lg:text-lg tracking-wide max-w-3xl text-center text-gray-200 px-4">Get trusted legal guidance tailored to your needs. Reach out today to schedule a consultation.</p> 
-             </motion.div>
-              </header> 
+<header className="relative h-[200px] sm:h-[240px] lg:h-[400px] text-white">
+
+  <img src="/images/hero4.webp" alt="Contact Us" className="w-full h-full object-cover" />
+
+  <div className="absolute inset-0 bg-black/75"></div>
+
+  <motion.div  className="
+    absolute inset-0
+    flex flex-col
+    items-center
+    justify-center
+    px-4
+    lg:-translate-y-4"
+    initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}  transition={{ duration: 0.8 }}>
+
+    <h1 className=" text-2xl sm:text-4xllg:text-6xl font-bold  text-white   text-center">  Contact Us </h1>
+
+    <p className="mt-2lg:mt-4 text-xs sm:text-base lg:text-lg tracking-wide max-w-3xl text-center text-gray-200px-4" >
+      Get trusted legal guidance tailored to your needs. Reach out today to schedule a consultation.</p>
+  </motion.div>
+</header>
 {/* contact card section */}
-   <section className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 mt-8">
-                <div className="bg-gray-100 rounded-xl shadow-md p-5 lg:p-6 text-center hover:-translate-y-2 transition duration-300">
-                    <a  href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
-                   <img src="/images/phone.svg" className="w-8 h-8 lg:w-10 lg:h-10 mx-auto" />       
-                    <p className="text-lg lg:text-xl font-bold text-gray-700 mt-3">Call Us</p>
-                  <h2 className="text-sm lg:text-base text-gray-600 mt-2 leading-relaxed" >+91 98765 43210</h2></a>
-                </div>
-                <div className="bg-gray-100 rounded-xl shadow-md p-5 lg:p-6 text-center hover:-translate-y-2 transition duration-300">
-                    <a href="mailto:contact@incredible.com">
-                    <img src="/images/gmail.png" className="w-8 h-8 lg:w-10 lg:h-10 mx-auto"/>
-                    <p className="text-lg lg:text-xl font-bold text-gray-700 mt-3">Email </p>
-                    <h2 className="text-sm lg:text-base text-gray-600 mt-2 leading-relaxed" >contact@incredible.com</h2></a>
-                </div>
-                <div className="bg-gray-100 rounded-xl shadow-md p-5 lg:p-6 text-center hover:-translate-y-2 transition duration-300">
-                     <img src="/images/map.svg" className="w-8 h-8 lg:w-10 lg:h-10 mx-auto"/>
-                    <p className="text-lg lg:text-xl font-bold text-gray-700 mt-3"> Address</p>
-                    <h2 className="text-sm lg:text-base text-gray-600 mt-2 leading-relaxed" >123 Gandhi Street, Chennai, Tamil Nadu</h2>
-                </div>
-                <div className="bg-gray-100 rounded-xl shadow-md p-5 lg:p-6 text-center hover:-translate-y-2 transition duration-300">
-                       <img src="/images/time.png" className="w-8 h-8 lg:w-10 lg:h-10 mx-auto"/>
-                    <p className="text-lg lg:text-xl font-bold text-gray-700 mt-3">Working Hours</p>
-                    <h2  className="text-sm lg:text-base text-gray-600 mt-2 leading-relaxed">Mon - Sat : 9:00 AM - 7:00 PM</h2>
-                </div>
-              </div>
+  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+  <div className=" grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-6 mt-8" >
+
+    {/* Call Card */}
+    <div className=" bg-gray-100 rounded-xl shadow-md p-3 lg:p-6 text-center hover:-translate-y-2 transition duration-300">
+      <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
+
+        <img src="/images/phone.svg" className="w-7 h-7 lg:w-10 lg:h-10 mx-auto" />
+
+        <p className="text-sm lg:text-xl font-bold text-gray-700 mt-2">
+          Call Us
+        </p>
+
+        <h2 className="text-xs lg:text-base text-gray-600 mt-1">
+          +91 98765 43210
+        </h2>
+
+      </a>
+    </div>
+
+
+    {/* Email Card */}
+    <div className=" bg-gray-100 rounded-xl shadow-md p-3 lg:p-6 text-centerhover:-translate-y-2transition duration-300 ">
+      <a href="mailto:contact@incredible.com">
+
+        <img src="/images/gmail.png" className="w-7 h-7 lg:w-10 lg:h-10 mx-auto" />
+
+        <p className="text-sm lg:text-xl font-bold text-gray-700 mt-2">
+          Email
+        </p>
+
+        <h2 className="text-xs lg:text-base text-gray-600 mt-1">
+          contact@incredible.com
+        </h2>
+      </a>
+    </div>
+
+    {/* Address Card */}
+    <div className=" bg-gray-100 rounded-xl shadow-md  p-3 lg:p-6 text-center hover:-translate-y-2  transition duration-300  " >
+
+      <img src="/images/map.svg" className="w-7 h-7 lg:w-10 lg:h-10 mx-auto" />
+
+      <p className="text-sm lg:text-xl font-bold text-gray-700 mt-2">
+        Address
+      </p>
+
+      <h2 className="text-xs lg:text-base text-gray-600 mt-1">
+       123 Gandhi Street, Chennai, Tamil Nadu
+      </h2>
+
+    </div>
+
+    {/* Working Hours */}
+    <div className=" bg-gray-100 rounded-xl shadow-md p-3 lg:p-6 text-center hover:-translate-y-2 transition duration-300 " >
+
+      <img src="/images/time.png" className="w-7 h-7 lg:w-10 lg:h-10 mx-auto" />
+
+      <p className="text-sm lg:text-xl font-bold text-gray-700 mt-2">
+        Working Hours
+      </p>
+
+      <h2 className="text-xs lg:text-base text-gray-600 mt-1">
+        Mon - Sat : 9 AM - 7 PM
+      </h2>
+
+    </div>
+  </div>
+
 </section>
               {/* contact form section */}
   <section className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 block ">

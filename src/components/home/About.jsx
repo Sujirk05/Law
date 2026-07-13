@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <section  id="About"  className="   relative w-full py-16 md:py-28 px-4  md:px-6 sm:px-6 lg:px-16 overflow-hidden scroll-mt-24 bg-[#F8F6F1]  border-y border-yellow-500/10  "   >
+<section id="About"  className=" relative w-full py-4 md:py-28
+  px-4 md:px-6 sm:px-6 lg:px-16 overflow-hidden scroll-mt-24 bg-[#F8F6F1] border-y border-[#C9A227]/20">
       
       <div className="absolute top-24 right-24 w-96 h-96 bg-yellow-500/10 blur-[140px] rounded-full" />
       <div className="absolute bottom-10 left-10 w-72 h-72 bg-yellow-500/5 blur-[120px] rounded-full" />
@@ -15,53 +16,31 @@ function About() {
           transition={{ duration: 1.2 }}
           viewport={{ once: true, amount: 0.3 }}
           className="relative"  >
-          <div
-            className="
-              relative rounded-3xl overflow-hidden
-              border border-yellow-500/20
-              ring-1 ring-yellow-500/10
-              shadow-[0_0_40px_rgba(234,179,8,0.12)]  "  >
+          <div className=" hidden md:block relative rounded-3xl overflow-hidden
+              border border-yellow-500/20 ring-1 ring-yellow-500/10 shadow-[0_0_40px_rgba(234,179,8,0.12)]  "  >
 
-            <img   src="/images/bg2.webp"   alt="Law Office" loading="lazy"  className="  w-full h-[320px] sm:h-[400px] lg:h-[500px] object-cover  brightness-105 contrast-110    hover:scale-[1.02]   transition duration-700   " />
+            <img   src="/images/bg2.webp"   alt="Law Office" loading="lazy"  className=" hidden md:block w-full h-[320px] sm:h-[400px] lg:h-[500px] object-cover  brightness-105 contrast-110    hover:scale-[1.02]   transition duration-700   " />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div> 
 
-          <div
-            className="
-             hidden sm:block
-              absolute -top-5 right-[-15px]
-              bg-black/40 backdrop-blur-md
-              border border-yellow-500/30
-              rounded-2xl px-7 py-4
-              shadow-[0_0_20px_rgba(234,179,8,0.12)]   "   >
+          <div className=" hidden sm:block absolute -top-5 right-[-15px] bg-black/40 backdrop-blur-md
+              border border-yellow-500/30 rounded-2xl px-7 py-4 shadow-[0_0_20px_rgba(234,179,8,0.12)]  "  >
 
             <h3 className="text-4xl font-bold text-yellow-400">15+</h3>
             <p className="text-gray-300 text-sm">Years Experience</p>
           </div>
 
          
-          <div
-            className="
-             hidden sm:block
-              absolute bottom-10 -left-14
-              bg-black/40 backdrop-blur-md
-              border border-yellow-500/30
-              rounded-2xl px-9 py-6
-              shadow-[0_0_30px_rgba(234,179,8,0.15)]  "   >
+          <div className=" hidden sm:block absolute bottom-10 -left-14 bg-black/40 backdrop-blur-md
+              border border-yellow-500/30 rounded-2xl px-9 py-6 shadow-[0_0_30px_rgba(234,179,8,0.15)]  "  >
 
             <h3 className="text-5xl font-bold text-yellow-400">500+</h3>
             <p className="text-gray-300">Cases Handled</p>
           </div>
 
-          <div
-            className="
-             hidden sm:block
-              absolute bottom-6 -right-4
-              bg-black/40 backdrop-blur-md
-              border border-yellow-500/30
-              rounded-2xl px-7 py-4
-              shadow-[0_0_20px_rgba(234,179,8,0.12)]  "  >
+          <div className=" hidden sm:block absolute bottom-6 -right-4 bg-black/40 backdrop-blur-md
+              border border-yellow-500/30 rounded-2xl px-7 py-4 shadow-[0_0_20px_rgba(234,179,8,0.12)]  " >
 
             <h3 className="text-4xl font-bold text-yellow-400">98%</h3>
             <p className="text-gray-300 text-sm">Success Rate</p>
@@ -75,9 +54,9 @@ function About() {
           viewport={{ once: true, amount: 0.3 }}
           className="max-w-[340px] sm:max-w-2xl" >
 
-          <p className="uppercase tracking-[0.35em] text-yellow-400 font-semibold">
-            About Us </p>
-
+ <p className="uppercase tracking-[4px] text-xl text-[#8A5A00] font-semibold">
+  ABOUT US
+</p>
           <h2 className="text-2xl sm:text-4xl  lg:text-5xl font-medium  mt-6 text-slate-900 leading-tight">
             Dedicated to Justice,
             <br />
@@ -98,15 +77,14 @@ function About() {
           </p>
 
           <div className="mt-8 md:mt-12 flex gap-3 md:gap-5">
-            <Link to="/Aboutpage">
-              <button className="px-6 py-3 md:px-10 md:py-5 bg-yellow-500 text-black font-semibold font-serif rounded-2xl
-               hover:scale-105 transition duration-300 shadow-xl"  > About Our Firm </button>
-            </Link>
+            <Link to="/Aboutpage" className="inline-flex items-center justify-center min-h-[48px]px-8 py-3 md:px-10 md:py-5 bg-yellow-500
+  text-black font-semiboldfont-serif rounded-2xl hover:bg-yellow-600 hover:scale-105 transition duration-300 shadow-xl">
+  About Our Firm
+</Link>
 
-           <Link to="/Contactpage">
-            <button className="px-6 py-3 md:px-10 md:py-5 border border-yellow-500 text-yellow-400 rounded-2xl hover:bg-yellow-500
-             hover:text-black transition duration-300"  >  Contact Us</button>
-            </Link>
+          <Link to="/Contactpage" className="inline-block px-6 py-3 md:px-10 md:py-5  border border-yellow-500 text-yellow-400 rounded-2xl 
+    transition duration-300 cursor-pointer hover:bg-yellow-500 hover:text-black max-md:bg-yellow-500  max-md:text-black ">
+            Contact Us</Link>
             
           </div>
         </motion.div>

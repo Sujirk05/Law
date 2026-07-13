@@ -8,27 +8,33 @@ function Appointpage(){
   };
     return(
        <>
-           {/* book appointment hero section */}
-           <header className="relative h-[280px] lg:h-[350px] text-white">
-  <img  src="/images/hero5.webp"  alt="Book Appointment"   
-   className="w-full h-full object-cover" />
+           {/* Book Appointment Hero Section */}
+
+<header className="relative h-[200px] sm:h-[240px] lg:h-[350px] text-white">
+
+  <img src="/images/hero5.webp" alt="Book Appointment" className="w-full h-full object-cover"/>
 
   <div className="absolute inset-0 bg-black/75"></div>
 
- <motion.div
-  className="absolute inset-0 flex flex-col items-center justify-center px-4 lg:-translate-y-4"
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
->
-    <h1  className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white"  >
+  <motion.div
+    className="
+    absolute inset-0
+    flex flex-col
+    items-center
+    justify-center
+    px-4
+    lg:-translate-y-4"
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }} >
+
+    <h1 className=" text-2xl sm:text-4xl lg:text-5xl font-bold text-white  text-center" >
       Book an Appointment
     </h1>
-
-  <p className="mt-3 lg:mt-5 text-sm lg:text-xl text-gray-200 text-center">
+    <p className=" mt-2 lg:mt-5 text-xs sm:text-baselg:text-xl text-gray-200 text-center" >
       Schedule a confidential consultation with our legal experts
     </p>
-</motion.div>
+  </motion.div>
 </header>
 
 {/* book appointment form section */}

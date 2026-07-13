@@ -4,26 +4,24 @@ function Aboutpage() {
     return(
        <>
         {/* about hero section */}
-          <header className="relative h-[280px] lg:h-[400px] text-white">
+         <header className="relative h-[200px] sm:h-[240px] lg:h-[400px] text-white">
 
-              <img  src="/images/hero.webp" alt="hero banner"  
-  className="w-full h-full object-cover"/>
+  <img src="/images/hero.webp" alt="hero banner" className="w-full h-full object-cover" />
+
   <div className="absolute inset-0 bg-black/75"></div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <motion.div
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  className="absolute inset-0 flex flex-col items-center justify-center"
->
-    <h1  className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white text-center px-4"     >
-      About Incredible Law Chamber
-    </h1>
-      <p className="mt-3 lg:mt-4 text-sm sm:text-base lg:text-lg tracking-wide max-w-3xl text-center text-gray-200 px-6">
-        Advocating Justice. Protecting Rights. Delivering Results.
-      </p>
-      
-      </motion.div>
+
+  
+  <div className="absolute inset-0 flex flex-col items-center justify-center">
+
+    <motion.div
+   initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="flex flex-col items-center justify-center">
+
+      <h1 className=" text-2xl sm:text-4xl lg:text-6xl font-bold text-white text-center px-4" >
+        About Incredible Law Chamber</h1>
+
+      <p className=" mt-2 lg:mt-4 text-xs sm:text-base lg:text-lg tracking-wide max-w-3xl text-center text-gray-200 px-6" >
+        Advocating Justice. Protecting Rights. Delivering Results.</p>
+    </motion.div>
   </div>
 </header>
 
