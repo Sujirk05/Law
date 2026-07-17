@@ -152,7 +152,7 @@ return (
                   {card.description}
                 </p>
                 <a href="/Appointpage" className="mt-5">
-                  <button className=" w-full bg-yellow-500text-black py-3 rounded-xl font-semibold font-serif hover:bg-yellow-400 transition " >
+                  <button className=" w-full bg-yellow-500 text-black py-3 rounded-xl font-semibold font-serif hover:bg-yellow-400 transition " >
                     Book Appointment </button> </a>
               </div>
             </div>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiPlus, FiMinus } from "react-icons/fi";
-import { DiVim } from "react-icons/di";
+
 function Faq() {
   const faq = [
     {

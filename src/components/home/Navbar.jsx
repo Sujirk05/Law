@@ -43,7 +43,7 @@ function Navbar() {
 
           {/* Logo */}
           <Link  to="/"  onClick={scrollTop}  className="flex items-center"  >
-            <img   src="/images/logo1.svg"  alt="Incredible Law Chamber"  className="h-16 lg:h-20 w-auto transition-transform duration-300 hover:scale-105" />
+            <img   src="/images/logo1.svg"  alt="Incredible Law Chamber"  className="h-20 lg:h-24 w-auto transition-transform duration-300 hover:scale-105" />
           </Link>
 
           {/* Desktop Menu */}

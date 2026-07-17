@@ -24,6 +24,7 @@ function App() {
   }, []);
 
   return (
+
     <BrowserRouter>
       <Navbar />
       <ScrollToTop />
@@ -38,6 +39,7 @@ function App() {
 </main>
       <Footer />
     </BrowserRouter>
+    
   );
 }
 

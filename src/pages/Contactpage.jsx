@@ -54,7 +54,7 @@ function Contactpage() {
 
 
     {/* Email Card */}
-    <div className=" bg-gray-100 rounded-xl shadow-md p-3 lg:p-6 text-centerhover:-translate-y-2transition duration-300 ">
+    <div className=" bg-gray-100 rounded-xl shadow-md p-3 lg:p-6 text-center hover:-translate-y-2transition duration-300 ">
       <a href="mailto:contact@incredible.com">
 
         <img src="/images/gmail.png" className="w-7 h-7 lg:w-10 lg:h-10 mx-auto" />
