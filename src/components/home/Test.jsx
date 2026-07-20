@@ -1,13 +1,18 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import img1 from "/images/img1.webp"
+import img2 from "/images/img2.webp"
+import img3 from "/images/img3.webp"
+import img4 from "/images/img4.webp"
+import img5 from "/images/img5.webp"
+import img6 from "/images/img6.webp"
 function Test() {
   const test = [
     {
       name: "Priya S",
       service: "Family Law Client",
       star: 5,
-      image: "./images/img1.webp",
+      image: img1,
       description:
         "The legal guidance and support I received were exceptional. Every step of the process was handled with professionalism, clarity, and dedication. I felt confident knowing my case was in trusted hands.",
     },
@@ -15,7 +20,7 @@ function Test() {
       name: "Rajesh K",
       service: "Civil Litigation Client",
       star: 4,
-      image: "./images/img2.webp",
+      image: img2,
       description:
         "The professionalism and dedication shown throughout my case were truly remarkable. Every concern was addressed with clarity, and I always felt supported during the legal process.",
     },
@@ -23,7 +28,7 @@ function Test() {
       name: "Meena R",
       service: "Property Dispute Client",
       star: 5,
-      image: "./images/img3.webp",
+      image: img3,
       description:
         "I highly appreciate the commitment and legal expertise provided. Their strategic guidance helped me navigate a complex situation with confidence and peace of mind.",
     },
@@ -31,7 +36,7 @@ function Test() {
       name: "Arun V",
       service: "Corporate Legal Client",
       star: 5,
-      image: "./images/img4.webp",
+      image: img4,
       description:
         "From the initial consultation to the final resolution, the entire experience was smooth and reassuring. Their expertise helped me navigate a complex legal matter with ease.",
     },
@@ -39,13 +44,13 @@ function Test() {
       name: "Kavitha M",
       service: "Legal Advisory Client",
       star: 4,
-      image: "./images/img5.webp",
+      image: img5,
       description:
         "The support and dedication shown were truly outstanding. Every question was answered patiently, and I always felt that my best interests were being protected.",
     },
     {
       name: "Suresh P",
-      service: "Criminal Defense Client",
+      service: img6,
       star: 5,
       image: "./images/img6.webp",
       description:

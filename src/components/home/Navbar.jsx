@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
-
+import logo from "/images/logo1.png"
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -43,7 +43,7 @@ function Navbar() {
 
           {/* Logo */}
           <Link  to="/"  onClick={scrollTop}  className="flex items-center"  >
-            <img   src="/images/logo1.svg"  alt="Incredible Law Chamber"  className="h-20 lg:h-24 w-auto transition-transform duration-300 hover:scale-105" />
+            <img   src={logo}  alt="Incredible Law Chamber"  className="h-20 lg:h-36 w-auto transition-transform duration-300 hover:scale-105" />
           </Link>
 
           {/* Desktop Menu */}
@@ -126,8 +126,8 @@ function Navbar() {
         </div>
 
         {/* Mobile Navigation */}
-        <nav  className="mt-12 flex flex-col px-8"   >
-          <NavLink  to="/"  end onClick={scrollTop} className={({ isActive }) =>
+        <nav  className="mt-12 flex flex-col px-8 "   >
+          <NavLink  to="/"   onClick={scrollTop} className={({ isActive }) =>
               `py-4 border-b border-white/10 text-lg transition-all duration-300 ${
                 isActive
                   ? "text-yellow-500"

@@ -1,6 +1,10 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
-
+import conhero from "/images/hero4.webp"
+import phone from "/images/phone.svg"
+import gmail from"/images/gmail.png"
+import map from "/images/map.svg"
+import time from "/images/time.png"
 function Contactpage() {
     const handleSubmit = (e) => {
     e.preventDefault(); 
@@ -11,7 +15,7 @@ function Contactpage() {
             {/* Contact Page Hero Section */}
 <header className="relative h-[200px] sm:h-[240px] lg:h-[400px] text-white">
 
-  <img src="/images/hero4.webp" alt="Contact Us" className="w-full h-full object-cover" />
+  <img src={conhero} alt="Contact Us" className="w-full h-full object-cover" />
 
   <div className="absolute inset-0 bg-black/75"></div>
 
@@ -39,7 +43,7 @@ function Contactpage() {
     <div className=" bg-gray-100 rounded-xl shadow-md p-3 lg:p-6 text-center hover:-translate-y-2 transition duration-300">
       <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
 
-        <img src="/images/phone.svg" className="w-7 h-7 lg:w-10 lg:h-10 mx-auto" />
+        <img src={phone} className="w-7 h-7 lg:w-10 lg:h-10 mx-auto" />
 
         <p className="text-sm lg:text-xl font-bold text-gray-700 mt-2">
           Call Us
@@ -57,7 +61,7 @@ function Contactpage() {
     <div className=" bg-gray-100 rounded-xl shadow-md p-3 lg:p-6 text-center hover:-translate-y-2transition duration-300 ">
       <a href="mailto:contact@incredible.com">
 
-        <img src="/images/gmail.png" className="w-7 h-7 lg:w-10 lg:h-10 mx-auto" />
+        <img src={gmail} className="w-7 h-7 lg:w-10 lg:h-10 mx-auto" />
 
         <p className="text-sm lg:text-xl font-bold text-gray-700 mt-2">
           Email
@@ -72,7 +76,7 @@ function Contactpage() {
     {/* Address Card */}
     <div className=" bg-gray-100 rounded-xl shadow-md  p-3 lg:p-6 text-center hover:-translate-y-2  transition duration-300  " >
 
-      <img src="/images/map.svg" className="w-7 h-7 lg:w-10 lg:h-10 mx-auto" />
+      <img src={map} className="w-7 h-7 lg:w-10 lg:h-10 mx-auto" />
 
       <p className="text-sm lg:text-xl font-bold text-gray-700 mt-2">
         Address
@@ -87,7 +91,7 @@ function Contactpage() {
     {/* Working Hours */}
     <div className=" bg-gray-100 rounded-xl shadow-md p-3 lg:p-6 text-center hover:-translate-y-2 transition duration-300 " >
 
-      <img src="/images/time.png" className="w-7 h-7 lg:w-10 lg:h-10 mx-auto" />
+      <img src={time} className="w-7 h-7 lg:w-10 lg:h-10 mx-auto" />
 
       <p className="text-sm lg:text-xl font-bold text-gray-700 mt-2">
         Working Hours

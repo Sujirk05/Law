@@ -1,13 +1,14 @@
-import Cards from "../components/home/Cards";
+import Cards from "../Card/Cards";
 import { motion } from "framer-motion";
-
+import servicebg from "/images/bg.png"
+import serhero from "/images/hero3.webp"
 function Servicepage() {
   return (
     <>
 {/* Hero Section */}
 <header className="relative h-[200px] sm:h-[240px] lg:h-[400px] text-white">
 
-  <img src="/images/hero3.webp" alt="Legal Services" className="w-full h-full object-cover"/>
+  <img src={serhero} alt="Legal Services" className="w-full h-full object-cover"/>
 
   <div className="absolute inset-0 bg-black/75"></div>
 
@@ -76,7 +77,7 @@ function Servicepage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }} >
-                <img src="/images/bg.png" alt="Legal Services"  loading="lazy"
+                <img src={servicebg} alt="Legal Services"  loading="lazy"
                  className="max-w-[350px] lg:max-w-[500px] w-full h-auto hidden md:block" />
               </motion.div>
             </div>

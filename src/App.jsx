@@ -5,9 +5,9 @@ import Hero from "./components/home/Hero";
 import Appointpage from "./pages/Appointpage"
 import Servicepage from "./pages/Servicepage";
 import Contactpage from "./pages/Contactpage";
-import Home from "./components/home/Home";
+import Home from "./pages/Home";
 import Aboutpage from "./pages/Aboutpage";
-import ScrollToTop from "./components/home/ScrollToTop";
+import ScrollToTop from "./Scrollcomponent/ScrollToTop";
 import './App.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -26,8 +26,9 @@ function App() {
   return (
 
     <BrowserRouter>
-      <Navbar />
       <ScrollToTop />
+      <Navbar />
+    
       <main>
       <Routes>
       < Route path="/" element={<Home />} />

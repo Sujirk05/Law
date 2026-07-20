@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import bgimg from "../../../public/images/bg.webp"
+import bgimg from "/images/bg.webp"
 function Hero() {
   return (
     <section

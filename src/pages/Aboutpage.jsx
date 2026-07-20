@@ -1,12 +1,18 @@
 import { motion } from "framer-motion";
 import { FaCheck } from "react-icons/fa";
+import abhero from "/images/hero.webp"
+import abbg from "/images/adv.webp"
+import shield from "/images/shield.png"
+import crown from "/images/crown.png"
+import hand from "/images/hand.png"
+import scale from "/images/scale.png"
 function Aboutpage() {
     return(
        <>
         {/* about hero section */}
          <header className="relative h-[200px] sm:h-[240px] lg:h-[400px] text-white">
 
-  <img src="/images/hero.webp" alt="hero banner" className="w-full h-full object-cover" />
+  <img src={abhero} alt="hero banner" className="w-full h-full object-cover" />
 
   <div className="absolute inset-0 bg-black/75"></div>
 
@@ -135,7 +141,7 @@ transition={{ duration: 0.6, delay: 0.6 }}
   viewport={{ once: true }}
 >
     <img
-      src="/images/adv.webp"   loading="lazy"
+      src={abbg}   loading="lazy"
       className=" hidden md:block w-full h-[280px] lg:h-[400px] object-cover"
       alt="Law books"
     />
@@ -152,7 +158,7 @@ transition={{ duration: 0.6, delay: 0.6 }}
   transition={{ duration: 0.6, delay: 0.1 }}
   viewport={{ once: true }}
 >
-  <img src="./images/shield.png" alt="Integrity" className="mx-auto mb-3 lg:mb-4 w-10 h-10 lg:w-12 lg:h-12" />
+  <img src={shield} alt="Integrity" className="mx-auto mb-3 lg:mb-4 w-10 h-10 lg:w-12 lg:h-12" />
 
     <h3 className="text-base lg:text-xl font-semibold text-gray-700">Professional Integrity</h3>
     </motion.div>
@@ -165,7 +171,7 @@ transition={{ duration: 0.6, delay: 0.6 }}
   transition={{ duration: 0.6, delay: 0.2 }}
   viewport={{ once: true }}
 >
-  <img src="./images/crown.png" alt="Leadership" className="mx-auto mb-3 lg:mb-4 w-10 h-10 lg:w-12 lg:h-12" />
+  <img src={crown} alt="Leadership" className="mx-auto mb-3 lg:mb-4 w-10 h-10 lg:w-12 lg:h-12" />
                 <h3 className="text-base lg:text-xl font-semibold text-gray-700">Leadership Excellence</h3>
       </motion.div>        
         </div>
@@ -176,7 +182,7 @@ transition={{ duration: 0.6, delay: 0.6 }}
   transition={{ duration: 0.6, delay: 0.3 }}
   viewport={{ once: true }}
 >
-  <img src="./images/scale.png" alt="Legal Expertise" className="mx-auto mb-3 lg:mb-4 w-10 h-10 lg:w-12 lg:h-12" />
+  <img src={scale} alt="Legal Expertise" className="mx-auto mb-3 lg:mb-4 w-10 h-10 lg:w-12 lg:h-12" />
             <h3 className="text-base lg:text-xl font-semibold text-gray-700">Legal Expertise</h3>
            </motion.div> 
         </div>
@@ -187,7 +193,7 @@ transition={{ duration: 0.6, delay: 0.6 }}
   transition={{ duration: 0.6, delay: 0.4 }}
   viewport={{ once: true }}
 >
-  <img src="./images/hand.png" alt="Client Commitment" className="mx-auto mb-3 lg:mb-4 w-10 h-10 lg:w-12 lg:h-12" />
+  <img src={hand} alt="Client Commitment" className="mx-auto mb-3 lg:mb-4 w-10 h-10 lg:w-12 lg:h-12" />
             <h3 className="text-base lg:text-xl font-semibold text-gray-700">Client Commitment</h3>
        </motion.div>    
         </div>

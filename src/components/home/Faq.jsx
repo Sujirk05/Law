@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
@@ -32,64 +32,89 @@ function Faq() {
   ];
 
   const [openIndex, setOpenIndex] = useState(0);
-const handleToggle = (index) => {
-  if (openIndex === index) {
-    setOpenIndex(null);
-    return;
-  }
-  if (openIndex !== null) {
-    setOpenIndex(null);
+  const [mounted, setMounted] = useState(false);
 
-    setTimeout(() => {
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const handleToggle = (index) => {
+    if (openIndex === index) {
+      setOpenIndex(null);
+      return;
+    }
+
+    if (openIndex !== null) {
+      setOpenIndex(null);
+
+      setTimeout(() => {
+        setOpenIndex(index);
+      }, 500);
+    } else {
       setOpenIndex(index);
-    }, 500); // wait for closing animation
-  } else {
-    setOpenIndex(index);
-  }
-};
-  return (
-  <section id="faq" className="bg-gradient-to-b from-[#f8fafc] to-[#eef2f7] py-14 lg:py-20 px-4 lg:px-6">
-     
-      <div className="text-center">
-     <h1 className="text-2xl lg:text-5xl font-medium text-slate-900">  Frequently Asked Questions  </h1>
+    }
+  };
 
-       <p className="text-slate-600 mt-4 max-w-3xl mx-auto text-sm lg:text-lg leading-relaxed px-2">
+  return (
+    <section
+      id="faq"
+      className="bg-gradient-to-b from-[#f8fafc] to-[#eef2f7] py-14 lg:py-20 px-4 lg:px-6"
+    >
+      <div className="text-center">
+        <h1 className="text-2xl lg:text-5xl font-medium text-slate-900">
+          Frequently Asked Questions
+        </h1>
+
+        <p className="text-slate-600 mt-4 max-w-3xl mx-auto text-sm lg:text-lg leading-relaxed px-2">
           Find answers to common legal questions and learn how we can assist
           you with confidence and clarity.
         </p>
       </div>
 
-    <div className="max-w-5xl mx-auto mt-10 lg:mt-14 space-y-4 lg:space-y-5">
+      <div className="max-w-5xl mx-auto mt-10 lg:mt-14 space-y-4 lg:space-y-5">
         {faq.map((item, index) => {
           const isOpen = openIndex === index;
 
           return (
-            <div key={index}
-              className="bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-200 overflow-hidden transition-all duration-300" >
-           
-              <div  onClick={() => handleToggle(index)}
-           className="cursor-pointer px-4 py-4 lg:px-8 lg:py-6 flex justify-between items-center gap-3" >
-               <p className="text-base lg:text-xl text-slate-900 font-serif">  {item.question}  </p>
+            <div
+              key={index}
+              className="bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-200 overflow-hidden transition-all duration-300"
+            >
+              <div
+                onClick={() => handleToggle(index)}
+                className="cursor-pointer px-4 py-4 lg:px-8 lg:py-6 flex justify-between items-center gap-3"
+              >
+                <p className="text-base lg:text-xl text-slate-900 font-serif">
+                  {item.question}
+                </p>
 
                 <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-yellow-500 flex items-center justify-center shadow-md shrink-0">
                   {isOpen ? (
-                      <FiMinus className="text-black text-lg lg:text-xl" />
-                     ) : (
-                         <FiPlus className="text-black text-lg lg:text-xl" />
-                          )}
-                   </div>
+                    <FiMinus className="text-black text-lg lg:text-xl" />
+                  ) : (
+                    <FiPlus className="text-black text-lg lg:text-xl" />
+                  )}
+                </div>
               </div>
 
               <AnimatePresence mode="wait">
                 {isOpen && (
                   <motion.div
-                   initial={{ height: 0 }}
-                   animate={{ height: "auto" }}
-                   exit={{ height: 0 }}
-                    transition={{duration: 0.5, ease: "easeInOut",}} className="overflow-hidden">
-                  <div className="px-4 pb-4 lg:px-8 lg:pb-6">
+                    initial={mounted ? { height: 0 } : false}
+                    animate={{ height: "auto" }}
+                    exit={{ height: 0 }}
+                    transition={{
+                      duration: 0.5,
+                      ease: "easeInOut",
+                    }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-4 pb-4 lg:px-8 lg:pb-6">
                       <div className="h-[1px] bg-yellow-500/20 mb-5"></div>
-                      <p className="text-slate-600 leading-relaxed text-sm lg:text-lg">   {item.answer}  </p>
+
+                      <p className="text-slate-600 leading-relaxed text-sm lg:text-lg">
+                        {item.answer}
+                      </p>
                     </div>
                   </motion.div>
                 )}

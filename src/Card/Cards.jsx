@@ -1,52 +1,59 @@
 import { useRef, useEffect } from "react";
-
+import civilImg from "/images/civil.webp";
+import criminalImg from "/images/criminal.webp";
+import familyImg from "/images/family.webp";
+import divorceImg from "/images/divorce.webp";
+import propertyImg from "/images/property.webp";
+import corporateImg from "/images/corporate.webp";
+import legalImg from "/images/legal.webp";
+import docImg from "/images/doc.webp";
 function Cards() {
 
   const cards = [
     {
-      image: "/images/civil.webp",
+      image: civilImg,
       title: "Civil Law",
       description:
         "Handling disputes related to contracts, property, compensation, and civil rights.",
     },
     {
-      image: "/images/criminal.webp",
+      image:  criminalImg,
       title: "Criminal Law",
       description:
         "Providing strong defense and legal assistance in criminal matters.",
     },
     {
-      image: "/images/family.webp",
+      image: familyImg,
       title: "Family Law",
       description:
         "Legal support for guardianship, domestic matters, and family disputes.",
     },
     {
-      image: "/images/divorce.webp",
+      image: divorceImg,
       title: "Divorce Cases",
       description:
         "Professional assistance for divorce, custody, and alimony cases.",
     },
     {
-      image: "/images/property.webp",
+      image: propertyImg,
       title: "Property Disputes",
       description:
         "Resolving land disputes, ownership conflicts, and inheritance matters.",
     },
     {
-      image: "/images/corporate.webp",
+      image: corporateImg,
       title: "Corporate Law",
       description:
         "Legal advisory for businesses, compliance, and corporate disputes.",
     },
     {
-      image: "/images/legal.webp",
+      image: legalImg,
       title: "Legal Consultation",
       description:
         "Expert consultation to understand legal rights and available actions.",
     },
     {
-      image: "/images/doc.webp",
+      image: docImg ,
       title: "Documentation & Agreements",
       description:
         "Drafting and reviewing contracts, agreements, and legal documents.",
@@ -118,7 +125,7 @@ return (
 <div className="md:hidden">
 
   <div ref={scrollRef}  onTouchStart={stopAutoScroll}  onTouchEnd={() => { setTimeout(() => {  startAutoScroll();  }, 800);}}
-    className=" flex gap-5 overflow-x-auto snap-x snap-mandatoryscroll-smoothpb-3 px-1 scrollbar-hide " >
+   className=" flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 px-1 scrollbar-hide " >
 
     {infiniteCards.map((card, index) => (
       <div key={index} className="snap-center shrink-0  w-[88%] bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100" >

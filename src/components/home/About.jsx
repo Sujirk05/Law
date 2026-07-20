@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
+import bgabout from "/images/bg2.webp"
 function About() {
   return (
 <section id="About"  className=" relative w-full py-4 md:py-28
@@ -19,7 +19,7 @@ function About() {
           <div className=" hidden md:block relative rounded-3xl overflow-hidden
               border border-yellow-500/20 ring-1 ring-yellow-500/10 shadow-[0_0_40px_rgba(234,179,8,0.12)]  "  >
 
-            <img   src="/images/bg2.webp"   alt="Law Office" loading="lazy"  className=" hidden md:block w-full h-[320px] sm:h-[400px] lg:h-[500px] object-cover  brightness-105 contrast-110    hover:scale-[1.02]   transition duration-700   " />
+            <img   src={bgabout}   alt="Law Office" loading="lazy"  className=" hidden md:block w-full h-[320px] sm:h-[400px] lg:h-[500px] object-cover  brightness-105 contrast-110    hover:scale-[1.02]   transition duration-700   " />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div> 
@@ -48,12 +48,12 @@ function About() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 120 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.2 }}
-          viewport={{ once: true, amount: 0.3 }}
-          className="max-w-[340px] sm:max-w-2xl" >
-
+  initial={{ opacity: 0, x: 120 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1.2 }}
+  viewport={{ once: true, amount: 0.3 }}
+  className="max-w-[340px] sm:max-w-2xl mx-auto"
+>
  <p className="uppercase tracking-[4px] text-xl text-[#8A5A00] font-semibold">
   ABOUT US
 </p>
@@ -77,7 +77,7 @@ function About() {
           </p>
 
           <div className="mt-8 md:mt-12 flex gap-3 md:gap-5">
-            <Link to="/Aboutpage" className="inline-flex items-center justify-center min-h-[48px]px-8 py-3 md:px-10 md:py-5 bg-yellow-500
+            <Link to="/Aboutpage" className="inline-flex items-center justify-center min-h-[48px] px-8 py-3 md:px-10 md:py-5 bg-yellow-500
   text-black font-semiboldfont-serif rounded-2xl hover:bg-yellow-600 hover:scale-105 transition duration-300 shadow-xl">
   About Our Firm
 </Link>

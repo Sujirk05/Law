@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import bookhero from "/images/hero5.webp"
 function Appointpage(){
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,7 +13,7 @@ function Appointpage(){
 
 <header className="relative h-[200px] sm:h-[240px] lg:h-[350px] text-white">
 
-  <img src="/images/hero5.webp" alt="Book Appointment" className="w-full h-full object-cover"/>
+  <img src={bookhero} alt="Book Appointment" className="w-full h-full object-cover"/>
 
   <div className="absolute inset-0 bg-black/75"></div>
 

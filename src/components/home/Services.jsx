@@ -1,51 +1,59 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom"
+import civilImg from "/images/civil.webp";
+import criminalImg from "/images/criminal.webp";
+import familyImg from "/images/family.webp";
+import divorceImg from "/images/divorce.webp";
+import propertyImg from "/images/property.webp";
+import corporateImg from "/images/corporate.webp";
+import legalImg from "/images/legal.webp";
+import docImg from "/images/doc.webp";
 
 function Services() {
   const services = [
     {
-      image: "/images/civil.webp",
+      image: civilImg,
       title: "Civil Law",
       description:
         "Contract disputes, compensation, property conflicts, and civil rights.",
     },
     {
-      image: "/images/criminal.webp",
+      image: criminalImg,
       title: "Criminal Law",
       description:
         "Strong legal defense and representation in criminal matters.",
     },
     {
-      image: "/images/family.webp",
+      image: familyImg,
       title: "Family Law",
       description:
         "Support for guardianship, domestic issues, and family disputes.",
     },
     {
-      image: "/images/divorce.webp",
+      image: divorceImg,
       title: "Divorce Cases",
       description:
         "Legal guidance for divorce, custody, and alimony matters.",
     },
     {
-      image: "/images/property.webp",
+      image: propertyImg,
       title: "Property Disputes",
       description:
         "Land ownership conflicts, inheritance, and property claims.",
     },
     {
-      image: "/images/corporate.webp",
+      image: corporateImg,
       title: "Corporate Law",
       description:
         "Business compliance, advisory, and corporate dispute resolution.",
     },
     {
-      image: "/images/legal.webp",
+      image: legalImg,
       title: "Legal Consultation",
       description:
         "Expert consultation to understand your legal rights.",
     },
     {
-      image: "/images/doc.webp",
+      image: docImg,
       title: "Documentation & Agreements",
       description:
         "Drafting and reviewing contracts and legal documents.",
@@ -67,33 +75,35 @@ function Services() {
         </p>
 
         {/* ================= Desktop ================= */}
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-          {services.map((service, index) => (
-            <div key={index}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            className="group relative h-[360px] sm:h-[400px] md:h-[440px] rounded-3xl overflow-hidden shadow-lg cursor-pointer 
-            transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl " >
-              <img src={service.image} alt={service.title}   loading="lazy"
-               className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"/>
+   <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+  {services.map((service, index) => (
+    <div key={index} data-aos="fade-up" data-aos-delay={index * 100} data-aos-duration="800" className="rounded-3xl" >
+      <div className=" group relative h-[360px] sm:h-[400px] md:h-[440px] rounded-3xl overflow-hidden cursor-pointer
+     shadow-lg transform-gpu will-change-transform transition-all duration-700 ease-in-out hover:-translate-y-2 hover:shadow-2xl "  >
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10"></div>
+        <img src={service.image} alt={service.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105" />
 
-              <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <h3 className="text-3xl font-bold text-white">  {service.title} </h3>
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10"></div>
 
-                <p className="text-gray-200 mt-4 text-lg leading-relaxed">  {service.description}</p>
+        <div className="absolute inset-0 p-8 flex flex-col justify-end">
+          <h3 className="text-3xl font-bold text-white">
+            {service.title}
+          </h3>
 
-                <Link to="/Appointpage">
-               <button className="mt-6 px-6 py-3 bg-yellow-500 text-black font-serif font-semibold rounded-xl hover:scale-105 transition duration-300">
-                    Book Appointment
-                  </button>
-                </Link>
-              </div>
-            </div>
-          ))}
+          <p className="text-gray-200 mt-4 text-lg leading-relaxed">
+            {service.description}
+          </p>
+
+          <Link to="/Appointpage">
+            <button className="mt-6 px-6 py-3 bg-yellow-500 text-black font-serif font-semibold rounded-xl transition-all duration-300 hover:bg-yellow-400 hover:scale-105">
+              Book Appointment
+            </button>
+          </Link>
         </div>
-
+      </div>
+    </div>
+  ))}
+</div>
         {/* ================= Mobile ================= */}
         <div className="grid grid-cols-2 gap-4 mt-10 md:hidden">
           {services.map((service, index) => (
@@ -104,7 +114,9 @@ function Services() {
                   className="w-full h-32 object-cover group-hover:scale-105 transition duration-500" />
 
                 <div className="px-3 py-3">
-                  <h3 className="text-sm font-semibold text-gray-900 leading-5 min-h-[44px]">  {service.title}</h3>
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 leading-6 min-h-[48px]">
+  {service.title}
+</h3>
                 </div>
               </div>
             </Link>
